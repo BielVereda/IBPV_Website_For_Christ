@@ -179,26 +179,55 @@ export default function Ministries() {
     setCurrentIndex(Math.min(maxIndex, newIndex));
   };
 
-  // Drag logic
-  const [startX, setStartX] = useState(0);
+  // Swipe com o dedo: o card acompanha o movimento e, ao soltar, avança ou volta
+  const [dragX, setDragX] = useState(0);
   const [isDragging, setIsDragging] = useState(false);
+  const dragRef = useRef({ active: false, startX: 0, startY: 0, locked: false });
 
-  const handleTouchStart = (e) => {
-    setStartX(e.touches[0].clientX);
-    setIsDragging(true);
+  const handlePointerDown = (e) => {
+    if (e.pointerType === 'mouse') return; // só toque/caneta; no desktop usa as setas
+    dragRef.current = { active: true, startX: e.clientX, startY: e.clientY, locked: false };
   };
 
-  const handleTouchEnd = (e) => {
-    if (!isDragging) return;
-    setIsDragging(false);
-    const diffX = startX - e.changedTouches[0].clientX;
-    if (Math.abs(diffX) > 50) {
-      if (diffX > 0 && currentIndex < maxIndex) {
-        handleNext();
-      } else if (diffX < 0 && currentIndex > 0) {
-        handlePrev();
+  const handlePointerMove = (e) => {
+    const d = dragRef.current;
+    if (!d.active) return;
+    const dx = e.clientX - d.startX;
+    const dy = e.clientY - d.startY;
+
+    if (!d.locked) {
+      // espera o gesto ficar claramente horizontal antes de "pegar" o card
+      if (Math.abs(dx) < 8 && Math.abs(dy) < 8) return;
+      if (Math.abs(dy) > Math.abs(dx)) {
+        d.active = false; // era rolagem vertical da página
+        return;
       }
+      d.locked = true;
+      setIsDragging(true);
+      e.currentTarget.setPointerCapture?.(e.pointerId);
     }
+
+    // resistência nas pontas (primeiro/último card)
+    const atStart = currentIndex === 0 && dx > 0;
+    const atEnd = currentIndex >= maxIndex && dx < 0;
+    setDragX(atStart || atEnd ? dx * 0.3 : dx);
+  };
+
+  const endDrag = (e, cancelled = false) => {
+    const d = dragRef.current;
+    if (!d.active) return;
+    const wasLocked = d.locked;
+    dragRef.current = { active: false, startX: 0, startY: 0, locked: false };
+    if (!wasLocked) return;
+
+    const dx = e.clientX - d.startX;
+    setIsDragging(false);
+    setDragX(0);
+    if (cancelled) return;
+
+    const threshold = Math.min(60, (cardWidth || 300) * 0.2);
+    if (dx < -threshold && currentIndex < maxIndex) handleNext();
+    else if (dx > threshold && currentIndex > 0) handlePrev();
   };
 
   const numDots = Math.ceil(ministriesData.length / visibleCards);
@@ -248,12 +277,14 @@ export default function Ministries() {
 
         <div className="carousel-track-wrap">
           <div
-            className="carousel-track"
+            className={`carousel-track ${isDragging ? 'dragging' : ''}`}
             ref={trackRef}
             role="list"
-            onTouchStart={handleTouchStart}
-            onTouchEnd={handleTouchEnd}
-            style={{ transform: `translateX(-${translateX}px)` }}
+            onPointerDown={handlePointerDown}
+            onPointerMove={handlePointerMove}
+            onPointerUp={(e) => endDrag(e)}
+            onPointerCancel={(e) => endDrag(e, true)}
+            style={{ transform: `translateX(${-translateX + dragX}px)` }}
           >
             {ministriesData.map((min) => (
               <article
