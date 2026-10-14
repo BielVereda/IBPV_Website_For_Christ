@@ -43,7 +43,7 @@ export default function MapLocation() {
                 <p><a href="https://linktr.ee/ibpedraviva" target="_blank" rel="noopener noreferrer">linktr.ee/ibpedraviva</a></p>
               </div>
             </div>
-            <a href="https://maps.google.com/?q=Av.+Nossa+Sra.+do+Sabará,+3673+-+Vila+Emir,+São+Paulo+-+SP" target="_blank" rel="noopener noreferrer" className="btn btn-primary" id="maps-btn">
+            <a href="https://maps.google.com/?q=Av.+Nossa+Sra.+do+Sabará,+3673+-+Vila+Emir,+São+Paulo+-+SP" target="_blank" rel="noopener noreferrer" className="btn btn-primary maps-btn maps-btn--desktop" id="maps-btn">
               Abrir no Google Maps
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ marginLeft: '8px' }}>
                 <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/>
@@ -60,6 +60,14 @@ export default function MapLocation() {
               referrerPolicy="no-referrer-when-downgrade">
             </iframe>
           </div>
+          <a href="https://maps.google.com/?q=Av.+Nossa+Sra.+do+Sabará,+3673+-+Vila+Emir,+São+Paulo+-+SP" target="_blank" rel="noopener noreferrer" className="btn btn-primary maps-btn maps-btn--mobile" id="maps-btn-mobile">
+            Abrir no Google Maps
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ marginLeft: '8px' }}>
+              <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/>
+              <path d="M15 3h6v6"/>
+              <path d="M10 14L21 3"/>
+            </svg>
+          </a>
         </div>
       </div>
     </section>
