@@ -276,7 +276,7 @@ select {
   transition: opacity var(--dur-fast);
 }
 
-@media (hover: hover) and (pointer: fine) {
+@media (hover: hover) and (pointer: fine) and (min-width: 768px) {
 .btn:hover::before {
   opacity: 1;
 }
@@ -292,7 +292,7 @@ select {
   box-shadow: var(--shadow-purple);
 }
 
-@media (hover: hover) and (pointer: fine) {
+@media (hover: hover) and (pointer: fine) and (min-width: 768px) {
 .btn-primary:hover {
   background: var(--clr-blue-500);
   box-shadow: 0 12px 40px hsla(200, 90%, 50%, 0.35);
@@ -307,7 +307,7 @@ select {
   backdrop-filter: blur(8px);
 }
 
-@media (hover: hover) and (pointer: fine) {
+@media (hover: hover) and (pointer: fine) and (min-width: 768px) {
 .btn-ghost:hover {
   background: rgba(255, 255, 255, 0.22);
   border-color: rgba(255, 255, 255, 0.7);
@@ -321,7 +321,7 @@ select {
   border: 1.5px solid rgba(255, 255, 255, 0.4);
 }
 
-@media (hover: hover) and (pointer: fine) {
+@media (hover: hover) and (pointer: fine) and (min-width: 768px) {
 .btn-outline-light:hover {
   background: rgba(255, 255, 255, 0.1);
   border-color: var(--clr-white);
@@ -343,7 +343,7 @@ select {
   transition: transform var(--dur-fast);
 }
 
-@media (hover: hover) and (pointer: fine) {
+@media (hover: hover) and (pointer: fine) and (min-width: 768px) {
 .btn:hover .btn-icon {
   transform: translateX(3px);
 }
@@ -450,7 +450,7 @@ select {
   white-space: nowrap;
 }
 
-@media (hover: hover) and (pointer: fine) {
+@media (hover: hover) and (pointer: fine) and (min-width: 768px) {
 .nav-link:hover {
   color: var(--clr-white);
   background: rgba(255, 255, 255, 0.12);
@@ -465,7 +465,7 @@ select {
   color: var(--clr-gray-700);
 }
 
-@media (hover: hover) and (pointer: fine) {
+@media (hover: hover) and (pointer: fine) and (min-width: 768px) {
 .navbar.scrolled .nav-link:hover {
   color: var(--clr-purple-700);
   background: var(--clr-purple-50);
@@ -488,7 +488,7 @@ select {
   transition: all var(--dur-med) var(--ease-out);
 }
 
-@media (hover: hover) and (pointer: fine) {
+@media (hover: hover) and (pointer: fine) and (min-width: 768px) {
 .nav-cta:hover {
   background: var(--clr-yellow-400) !important;
   transform: translateY(-1px);
@@ -506,7 +506,7 @@ select {
   transition: background var(--dur-fast);
 }
 
-@media (hover: hover) and (pointer: fine) {
+@media (hover: hover) and (pointer: fine) and (min-width: 768px) {
 .nav-toggle:hover {
   background: rgba(255, 255, 255, 0.1);
 }
@@ -580,7 +580,7 @@ select {
     border-bottom: 1px solid var(--clr-gray-100);
   }
 
-  @media (hover: hover) and (pointer: fine) {
+  @media (hover: hover) and (pointer: fine) and (min-width: 768px) {
 .nav-link:hover {
     color: var(--clr-purple-700);
     background: var(--clr-purple-50);
@@ -788,7 +788,7 @@ select {
   transition: transform 0.8s var(--ease-out);
 }
 
-@media (hover: hover) and (pointer: fine) {
+@media (hover: hover) and (pointer: fine) and (min-width: 768px) {
 .about-img-wrap:hover .about-img {
   transform: scale(1.03);
 }
@@ -922,10 +922,10 @@ select {
   background-image: var(--min-bg-image, none), var(--min-bg, linear-gradient(135deg, hsl(230, 70%, 18%) 0%, hsl(263, 65%, 32%) 100%));
 }
 
-@media (hover: hover) and (pointer: fine) {
+@media (hover: hover) and (pointer: fine) and (min-width: 768px) {
 .ministry-card:hover {
   transform: translateY(-6px);
-  box-shadow: var(--shadow-lg), 0 8px 32px hsla(200, 90%, 50%, 0.3);
+  box-shadow: var(--shadow-lg);
 }
 }
 
@@ -1032,7 +1032,7 @@ select {
   transition: all var(--dur-fast);
 }
 
-@media (hover: hover) and (pointer: fine) {
+@media (hover: hover) and (pointer: fine) and (min-width: 768px) {
 .min-social-btn:hover {
   background: var(--clr-blue-500);
   color: var(--clr-white);
@@ -1073,7 +1073,7 @@ select {
   border: 1.5px solid var(--clr-gray-100);
 }
 
-@media (hover: hover) and (pointer: fine) {
+@media (hover: hover) and (pointer: fine) and (min-width: 768px) {
 .carousel-btn:hover {
   background: var(--clr-blue-500);
   color: var(--clr-white);
@@ -1186,7 +1186,7 @@ select {
   transition: all var(--dur-med) var(--ease-out);
 }
 
-@media (hover: hover) and (pointer: fine) {
+@media (hover: hover) and (pointer: fine) and (min-width: 768px) {
 .pastor-card:hover {
   background: rgba(255, 255, 255, 0.1);
   transform: translateY(-4px);
@@ -1207,7 +1207,7 @@ select {
   transition: transform 0.6s var(--ease-out);
 }
 
-@media (hover: hover) and (pointer: fine) {
+@media (hover: hover) and (pointer: fine) and (min-width: 768px) {
 .pastor-card:hover .pastor-img {
   transform: scale(1.04);
 }
@@ -1291,7 +1291,7 @@ select {
   transition: all var(--dur-med) var(--ease-out);
 }
 
-@media (hover: hover) and (pointer: fine) {
+@media (hover: hover) and (pointer: fine) and (min-width: 768px) {
 .feature-item:hover {
   border-color: var(--clr-blue-300);
   box-shadow: 0 8px 24px hsla(200, 90%, 50%, 0.15);
@@ -1452,21 +1452,21 @@ select {
   transition: opacity var(--dur-med);
 }
 
-@media (hover: hover) and (pointer: fine) {
+@media (hover: hover) and (pointer: fine) and (min-width: 768px) {
 .culto-card:hover::before {
   opacity: 1;
 }
 }
 
-@media (hover: hover) and (pointer: fine) {
+@media (hover: hover) and (pointer: fine) and (min-width: 768px) {
 .culto-card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 8px 32px hsla(200, 90%, 50%, 0.3);
+  box-shadow: var(--shadow-lg);
   border-color: transparent;
 }
 }
 
-@media (hover: hover) and (pointer: fine) {
+@media (hover: hover) and (pointer: fine) and (min-width: 768px) {
 .culto-card:hover .culto-day-badge,
 .culto-card:hover .culto-name,
 .culto-card:hover .culto-time,
@@ -1475,13 +1475,13 @@ select {
 }
 }
 
-@media (hover: hover) and (pointer: fine) {
+@media (hover: hover) and (pointer: fine) and (min-width: 768px) {
 .culto-card:hover .culto-day-badge {
   background: rgba(255, 255, 255, 0.15);
 }
 }
 
-@media (hover: hover) and (pointer: fine) {
+@media (hover: hover) and (pointer: fine) and (min-width: 768px) {
 .culto-card:hover .culto-icon {
   color: var(--clr-white);
 }
@@ -1516,10 +1516,10 @@ select {
   opacity: 0 !important;
 }
 
-@media (hover: hover) and (pointer: fine) {
+@media (hover: hover) and (pointer: fine) and (min-width: 768px) {
 .culto-card--featured:hover {
   transform: translateY(-6px);
-  box-shadow: 0 20px 60px hsla(200, 90%, 50%, 0.4);
+  box-shadow: 0 20px 48px hsla(250, 60%, 40%, 0.4);
 }
 }
 
@@ -1646,7 +1646,7 @@ select {
   align-items: center;
 }
 
-@media (hover: hover) and (pointer: fine) {
+@media (hover: hover) and (pointer: fine) and (min-width: 768px) {
 #youtube-link-btn:hover {
   background: hsl(0, 84%, 38%);
   box-shadow: 0 12px 40px hsla(0, 84%, 48%, 0.35);
@@ -1870,7 +1870,7 @@ select {
   }
 }
 
-@media (hover: hover) and (pointer: fine) {
+@media (hover: hover) and (pointer: fine) and (min-width: 768px) {
 .oferta-card:hover {
   border-color: var(--clr-blue-300);
   box-shadow: 0 8px 32px hsla(200, 90%, 50%, 0.2);
@@ -1946,7 +1946,7 @@ select {
   cursor: pointer;
 }
 
-@media (hover: hover) and (pointer: fine) {
+@media (hover: hover) and (pointer: fine) and (min-width: 768px) {
 .copy-btn:hover {
   background: var(--clr-blue-100);
   color: var(--clr-blue-500);
@@ -2048,7 +2048,7 @@ select {
   line-height: 1.65;
 }
 
-@media (hover: hover) and (pointer: fine) {
+@media (hover: hover) and (pointer: fine) and (min-width: 768px) {
 .location-detail a:hover {
   color: var(--clr-purple-700);
   text-decoration: underline;
@@ -2161,7 +2161,7 @@ select {
   transition: all var(--dur-med) var(--ease-out);
 }
 
-@media (hover: hover) and (pointer: fine) {
+@media (hover: hover) and (pointer: fine) and (min-width: 768px) {
 .social-link:hover {
   background: var(--clr-blue-500);
   border-color: var(--clr-blue-500);
@@ -2170,7 +2170,7 @@ select {
 }
 }
 
-@media (hover: hover) and (pointer: fine) {
+@media (hover: hover) and (pointer: fine) and (min-width: 768px) {
 .social-link--whatsapp:hover {
   background: hsl(142, 70%, 40%);
   border-color: hsl(142, 70%, 40%);
@@ -2202,7 +2202,7 @@ select {
   transition: color var(--dur-fast);
 }
 
-@media (hover: hover) and (pointer: fine) {
+@media (hover: hover) and (pointer: fine) and (min-width: 768px) {
 .footer-nav a:hover {
   color: var(--clr-yellow-400);
 }
@@ -2215,7 +2215,7 @@ select {
   margin-bottom: var(--space-3);
 }
 
-@media (hover: hover) and (pointer: fine) {
+@media (hover: hover) and (pointer: fine) and (min-width: 768px) {
 .footer-contact a:hover {
   color: var(--clr-yellow-400);
 }
@@ -2302,7 +2302,7 @@ select {
   transition: all var(--dur-med) var(--ease-out);
 }
 
-@media (hover: hover) and (pointer: fine) {
+@media (hover: hover) and (pointer: fine) and (min-width: 768px) {
 .whatsapp-float:hover {
   transform: scale(1.1) translateY(-2px);
   box-shadow: 0 8px 32px hsla(142, 70%, 40%, 0.6);
@@ -2336,7 +2336,7 @@ select {
   border-left-color: var(--clr-gray-900);
 }
 
-@media (hover: hover) and (pointer: fine) {
+@media (hover: hover) and (pointer: fine) and (min-width: 768px) {
 .whatsapp-float:hover .whatsapp-tooltip {
   opacity: 1;
   transform: translateX(0);
@@ -2492,7 +2492,7 @@ select {
   border: 1.5px solid var(--clr-gray-100);
 }
 
-@media (hover: hover) and (pointer: fine) {
+@media (hover: hover) and (pointer: fine) and (min-width: 768px) {
 .events-carousel .carousel-btn:hover {
   background: var(--clr-blue-500);
   color: var(--clr-white);
@@ -2647,7 +2647,7 @@ select {
   border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
-@media (hover: hover) and (pointer: fine) {
+@media (hover: hover) and (pointer: fine) and (min-width: 768px) {
 .event-instagram-btn:hover {
   background: rgba(255, 255, 255, 0.2);
   border-color: rgba(255, 255, 255, 0.4);
@@ -2677,13 +2677,13 @@ select {
   padding: var(--space-4);
 }
 
-@media (hover: hover) and (pointer: fine) {
+@media (hover: hover) and (pointer: fine) and (min-width: 768px) {
 .event-card:hover .event-img {
   transform: scale(1.05);
 }
 }
 
-@media (hover: hover) and (pointer: fine) {
+@media (hover: hover) and (pointer: fine) and (min-width: 768px) {
 .event-instagram-btn:hover {
   background: var(--clr-blue-500);
   border-color: var(--clr-blue-500);
@@ -2809,7 +2809,7 @@ select {
   }
 }
 
-@media (hover: hover) and (pointer: fine) {
+@media (hover: hover) and (pointer: fine) and (min-width: 768px) {
 .baptism-gallery:hover {
   transform: translateY(-4px);
 }
@@ -2853,7 +2853,7 @@ select {
   font-style: normal;
 }
 
-@media (hover: hover) and (pointer: fine) {
+@media (hover: hover) and (pointer: fine) and (min-width: 768px) {
 .baptism-content .btn-primary:hover {
   background: var(--clr-blue-500);
   box-shadow: 0 8px 24px hsla(200, 90%, 50%, 0.3);
@@ -2971,7 +2971,7 @@ select {
   border-radius: 4px;
 }
 
-@media (hover: hover) and (pointer: fine) {
+@media (hover: hover) and (pointer: fine) and (min-width: 768px) {
 ::-webkit-scrollbar-thumb:hover {
   background: var(--clr-purple-300, hsl(263, 50%, 72%));
 }
@@ -2982,6 +2982,7 @@ select {
 
   .navbar,
   .whatsapp-float,
+  .instagram-float,
   .hero-scroll {
     display: none !important;
   }
@@ -3308,7 +3309,7 @@ iframe { max-width: 100%; }
   box-shadow: 0 2px 16px hsla(207, 100%, 25%, 0.12);
 }
 .navbar.scrolled .nav-link.active { color: var(--clr-blue-500); }
-@media (hover: hover) and (pointer: fine) {
+@media (hover: hover) and (pointer: fine) and (min-width: 768px) {
 .navbar.scrolled .nav-link:hover { color: var(--clr-blue-500); }
 }
 @media (max-width: 1279px) {
@@ -3448,7 +3449,7 @@ iframe { max-width: 100%; }
   color: var(--clr-blue-500);
   border-color: transparent;
 }
-@media (hover: hover) and (pointer: fine) {
+@media (hover: hover) and (pointer: fine) and (min-width: 768px) {
 .copy-btn:hover { background: var(--clr-yellow-400); color: var(--clr-purple-900); }
 }
 .bank-details {
@@ -3458,13 +3459,13 @@ iframe { max-width: 100%; }
 .bank-row { color: rgba(255, 255, 255, 0.85); }
 .bank-row:not(:last-child) { border-bottom-color: rgba(255, 255, 255, 0.2); }
 .bank-row strong { color: var(--clr-white); }
-@media (hover: hover) and (pointer: fine) {
+@media (hover: hover) and (pointer: fine) and (min-width: 768px) {
 .oferta-card:hover {
   border-color: var(--clr-blue-200);
-  box-shadow: 0 20px 44px hsla(210, 100%, 25%, 0.38);
+  box-shadow: var(--shadow-lg);
 }
 }
-@media (hover: hover) and (pointer: fine) {
+@media (hover: hover) and (pointer: fine) and (min-width: 768px) {
 .oferta-card.oferta-card--featured:hover {
   border-color: var(--clr-yellow-400);
   box-shadow: 0 0 0 3px hsla(46, 92%, 70%, 0.35), 0 22px 48px hsla(263, 70%, 22%, 0.5);
@@ -3547,7 +3548,7 @@ body { font-weight: 400; line-height: 1.65; }
   background: linear-gradient(135deg, var(--clr-purple-700) 0%, var(--clr-purple-600) 100%);
   box-shadow: var(--shadow-purple);
 }
-@media (hover: hover) and (pointer: fine) {
+@media (hover: hover) and (pointer: fine) and (min-width: 768px) {
   .culto-card.culto-card--featured:hover {
     box-shadow: 0 20px 48px hsla(263, 62%, 46%, 0.4);
   }
@@ -3567,8 +3568,8 @@ body { font-weight: 400; line-height: 1.65; }
 .culto-card:nth-child(3)::before {
   background: linear-gradient(90deg, var(--clr-purple-700) 0%, var(--clr-purple-800) 100%);
 }
-@media (hover: hover) and (pointer: fine) {
-  .culto-card:nth-child(1):hover { box-shadow: 0 12px 32px hsla(207, 100%, 33%, 0.35); }
+@media (hover: hover) and (pointer: fine) and (min-width: 768px) {
+  .culto-card:nth-child(1):hover { box-shadow: var(--shadow-lg); }
   .culto-card:nth-child(3):hover { box-shadow: 0 12px 32px hsla(263, 62%, 36%, 0.4); }
   .culto-card.culto-card--featured:hover { box-shadow: 0 20px 48px hsla(250, 60%, 40%, 0.4); }
 }
@@ -3576,3 +3577,120 @@ body { font-weight: 400; line-height: 1.65; }
 /* Versículos dos cards de ministério: detalhes em azul (claro o bastante para o fundo escuro) */
 .min-verse { border-left-color: hsl(207, 100%, 62%); }
 .min-verse cite { color: hsl(207, 100%, 72%); }
+
+/* =====================================================
+   AJUSTES MOBILE (rodapé, swipe do carrossel, menu)
+   ===================================================== */
+
+/* Rodapé: "Navegação" e "Ajuda & Contato" lado a lado no celular */
+@media (max-width: 639px) {
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-8) var(--space-4);
+  }
+  .footer-brand { grid-column: 1 / -1; }
+  .footer-nav a { font-size: 0.8125rem; }
+}
+
+/* Carrossel de ministérios: swipe horizontal acompanhando o dedo */
+.carousel-track-wrap { touch-action: pan-y; }
+.carousel-track { user-select: none; -webkit-user-select: none; }
+.carousel-track.dragging { transition: none; cursor: grabbing; }
+.carousel-track img { -webkit-user-drag: none; pointer-events: none; }
+
+/* Menu mobile: cartão roxo no canto superior direito */
+@media (max-width: 1279px) {
+  .navbar .nav-menu {
+    position: absolute;
+    inset: auto;
+    top: calc(100% + var(--space-2));
+    right: var(--space-4);
+    left: auto;
+    bottom: auto;
+    width: min(300px, calc(100vw - 2rem));
+    max-height: calc(100dvh - var(--nav-height) - var(--space-6));
+    padding: var(--space-3);
+    gap: 0;
+    background: linear-gradient(160deg, var(--clr-purple-800) 0%, var(--clr-purple-900) 100%);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: var(--radius-xl);
+    box-shadow: 0 20px 48px hsla(263, 70%, 12%, 0.45);
+    backdrop-filter: none;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    transform-origin: top right;
+    transform: scale(0.95) translateY(-8px);
+  }
+  .navbar .nav-menu.open { transform: scale(1) translateY(0); }
+
+  .navbar .nav-menu .nav-list { gap: 2px; }
+  .navbar .nav-menu .nav-list > li { flex-shrink: 0; }
+
+  .navbar .nav-menu .nav-link,
+  .navbar.scrolled .nav-menu .nav-link {
+    display: block;
+    padding: var(--space-3) var(--space-4);
+    font-size: var(--text-sm);
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.88);
+    border-bottom: 0;
+    border-radius: var(--radius-md);
+  }
+  .navbar .nav-menu .nav-link.active,
+  .navbar.scrolled .nav-menu .nav-link.active {
+    color: var(--clr-yellow-400);
+    background: rgba(255, 255, 255, 0.1);
+  }
+  .navbar .nav-menu .nav-link.nav-cta,
+  .navbar.scrolled .nav-menu .nav-link.nav-cta {
+    margin: var(--space-2) 0 0;
+    padding: var(--space-3) var(--space-4);
+    text-align: center;
+    background: var(--clr-yellow-500);
+    color: var(--clr-purple-900) !important;
+    font-weight: 700;
+    border-radius: var(--radius-md);
+  }
+}
+@media (max-width: 1279px) and (hover: hover) and (pointer: fine) and (min-width: 768px) {
+  .navbar .nav-menu .nav-link:hover,
+  .navbar.scrolled .nav-menu .nav-link:hover {
+    color: var(--clr-white);
+    background: rgba(255, 255, 255, 0.14);
+  }
+  .navbar .nav-menu .nav-link.nav-cta:hover { background: var(--clr-yellow-400); }
+}
+
+/* Celular: 2º culto com gradiente vertical (azul em cima, roxo embaixo) */
+@media (max-width: 767px) {
+  .culto-card.culto-card--featured {
+    background: linear-gradient(180deg, var(--clr-blue-500) 0%, var(--clr-purple-700) 100%);
+  }
+}
+
+/* Localização: no celular/tablet (1 coluna) o botão do Maps fica embaixo do mapa */
+.maps-btn--mobile { display: none; }
+@media (max-width: 899px) {
+  .maps-btn--desktop { display: none; }
+  .maps-btn--mobile { display: inline-flex; margin-top: calc(var(--space-4) - var(--space-10)); }
+}
+
+/* Botão flutuante do Instagram: só no celular, acima do WhatsApp */
+.instagram-float { display: none; }
+@media (max-width: 767px) {
+  .instagram-float {
+    position: fixed;
+    z-index: 900;
+    width: 52px;
+    height: 52px;
+    right: var(--space-4);
+    bottom: calc(var(--space-4) + 52px + var(--space-3) + env(safe-area-inset-bottom, 0px));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--clr-white);
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    box-shadow: 0 4px 20px hsla(335, 75%, 50%, 0.45);
+  }
+}
