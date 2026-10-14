@@ -19,11 +19,7 @@ export default function Footer() {
 
             <div className="footer-brand">
               <a href="#inicio" className="footer-logo" aria-label="Igreja Batista Pedra Viva">
-                <img src="assets/images/icons/logo.png" alt="Logo Igreja Batista Pedra Viva" className="footer-logo-img" loading="lazy" />
-                <div className="footer-logo-text">
-                  <span className="footer-logo-title">Pedra Viva</span>
-                  <span className="footer-logo-sub">Igreja Batista</span>
-                </div>
+                <img src="assets/images/icons/logo-ibpv-branca.png" alt="Igreja Batista Pedra Viva" className="footer-logo-img" loading="lazy" />
               </a>
               <p className="footer-tagline">Uma Igreja que ama, acolhe &amp; discipula.</p>
               <div className="footer-social" aria-label="Redes sociais">

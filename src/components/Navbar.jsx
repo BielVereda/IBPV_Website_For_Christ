@@ -70,11 +70,8 @@ export default function Navbar() {
     <header className={`navbar ${scrolled ? 'scrolled' : ''}`} id="navbar" role="banner">
       <div className="nav-container">
         <a href="#inicio" className="nav-logo" aria-label="Igreja Batista Pedra Viva - Página inicial" onClick={closeMenu}>
-          <img src="assets/images/icons/logo.png" alt="Logo Igreja Batista Pedra Viva" className="logo-img" />
-          <div className="logo-text">
-            <span className="logo-title">Pedra Viva</span>
-            <span className="logo-sub">Igreja Batista</span>
-          </div>
+          <img src="assets/images/icons/logo-ibpv-branca.png" alt="Igreja Batista Pedra Viva" className="logo-img logo-img--white" />
+          <img src="assets/images/icons/logo-ibpv-roxa.png" alt="" aria-hidden="true" className="logo-img logo-img--purple" />
         </a>
 
         <button
