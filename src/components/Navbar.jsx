@@ -32,12 +32,24 @@ export default function Navbar() {
     };
   }, []);
 
+  // Menu em formato de "cartão" no canto: não trava a rolagem da página.
+  // Fecha ao tocar fora dele ou ao apertar Esc.
   useEffect(() => {
-    document.body.style.overflow = isOpen ? 'hidden' : '';
-    if (window.lenis) {
-      if (isOpen) window.lenis.stop();
-      else window.lenis.start();
-    }
+    if (!isOpen) return;
+    const handleOutside = (e) => {
+      if (!e.target.closest('#navMenu') && !e.target.closest('#navToggle')) {
+        setIsOpen(false);
+      }
+    };
+    const handleKey = (e) => {
+      if (e.key === 'Escape') setIsOpen(false);
+    };
+    document.addEventListener('pointerdown', handleOutside);
+    document.addEventListener('keydown', handleKey);
+    return () => {
+      document.removeEventListener('pointerdown', handleOutside);
+      document.removeEventListener('keydown', handleKey);
+    };
   }, [isOpen]);
 
   const toggleMenu = () => setIsOpen(!isOpen);
@@ -68,7 +80,7 @@ export default function Navbar() {
         <button
           className={`nav-toggle ${isOpen ? 'active' : ''}`}
           id="navToggle"
-          aria-label="Abrir menu de navegação"
+          aria-label={isOpen ? 'Fechar menu de navegação' : 'Abrir menu de navegação'}
           aria-expanded={isOpen}
           aria-controls="navMenu"
           onClick={toggleMenu}
