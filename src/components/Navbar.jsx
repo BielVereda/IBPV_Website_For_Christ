@@ -34,6 +34,10 @@ export default function Navbar() {
 
   useEffect(() => {
     document.body.style.overflow = isOpen ? 'hidden' : '';
+    if (window.lenis) {
+      if (isOpen) window.lenis.stop();
+      else window.lenis.start();
+    }
   }, [isOpen]);
 
   const toggleMenu = () => setIsOpen(!isOpen);
@@ -74,7 +78,7 @@ export default function Navbar() {
           <span className="burger-line"></span>
         </button>
 
-        <nav className={`nav-menu ${isOpen ? 'open' : ''}`} id="navMenu" role="navigation" aria-label="Menu principal">
+        <nav data-lenis-prevent className={`nav-menu ${isOpen ? 'open' : ''}`} id="navMenu" role="navigation" aria-label="Menu principal">
           <ul className="nav-list" role="list">
             {navLinks.map((link) => (
               <li key={link.id}>
