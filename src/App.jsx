@@ -1,4 +1,5 @@
 import { useEffect } from 'react'
+import Lenis from 'lenis'
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import Events from './components/Events'
@@ -16,6 +17,38 @@ import Footer from './components/Footer'
 import './index.css'
 
 function App() {
+  useEffect(() => {
+    // Scroll suave (roda do mouse) + navegação suave por âncoras (#id)
+    const lenis = new Lenis({
+      duration: 1.15,
+      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+      smoothWheel: true,
+      allowNestedScroll: true,
+      autoRaf: true,
+    })
+    window.lenis = lenis
+
+    const handleAnchorClick = (e) => {
+      if (e.defaultPrevented || e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return
+      const link = e.target.closest('a[href^="#"]')
+      if (!link) return
+      const id = decodeURIComponent(link.getAttribute('href').slice(1))
+      if (!id) return
+      const target = document.getElementById(id)
+      if (!target) return
+      e.preventDefault()
+      lenis.scrollTo(target, { offset: 0, duration: 1.4, force: true })
+      history.replaceState(null, '', `#${id}`)
+    }
+    document.addEventListener('click', handleAnchorClick)
+
+    return () => {
+      document.removeEventListener('click', handleAnchorClick)
+      lenis.destroy()
+      delete window.lenis
+    }
+  }, [])
+
   useEffect(() => {
     // Reveal Observer logic
     const revealObserver = new IntersectionObserver(
