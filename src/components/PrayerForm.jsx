@@ -1,5 +1,7 @@
 import { useState } from 'react';
 
+const PRAYER_EMAIL = 'ibpv@ibpv.com.br';
+
 export default function PrayerForm() {
   const [formData, setFormData] = useState({ name: '', phone: '', request: '' });
   const [errors, setErrors] = useState({ name: false, request: false });
@@ -18,23 +20,35 @@ export default function PrayerForm() {
 
     setIsSubmitting(true);
 
-    setTimeout(() => {
-      const email = 'oracao@ibpedraviva.com.br';
-      const subject = `Pedido de Oração - ${formData.name}`;
-      const body = `Nome: ${formData.name}
+    const subject = `Pedido de Oração - ${formData.name.trim()}`;
+    const body = `Nome: ${formData.name.trim()}
 WhatsApp: ${formData.phone || 'Não informado'}
 
 Pedido de Oração:
-${formData.request}`;
+${formData.request.trim()}`;
 
-      const mailtoLink = `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-      window.location.href = mailtoLink;
+    // Abre a tela de novo e-mail do Gmail já preenchida (destinatário, assunto e mensagem).
+    // Precisa rodar direto no clique (sem setTimeout), senão o navegador bloqueia a nova aba.
+    const gmailUrl =
+      'https://mail.google.com/mail/?view=cm&fs=1' +
+      `&to=${encodeURIComponent(PRAYER_EMAIL)}` +
+      `&su=${encodeURIComponent(subject)}` +
+      `&body=${encodeURIComponent(body)}`;
 
+    const win = window.open(gmailUrl, '_blank');
+    if (win) {
+      win.opener = null;
+    } else {
+      // Pop-up bloqueado: abre na mesma aba
+      window.location.href = gmailUrl;
+    }
+
+    setTimeout(() => {
       setFormData({ name: '', phone: '', request: '' });
       setIsSubmitting(false);
       setShowSuccess(true);
-      setTimeout(() => setShowSuccess(false), 6000);
-    }, 1200);
+      setTimeout(() => setShowSuccess(false), 8000);
+    }, 600);
   };
 
   const handleChange = (e) => {
@@ -135,18 +149,19 @@ ${formData.request}`;
                 name="request" 
                 placeholder="Compartilhe o que está em seu coração..." 
                 required
+                maxLength={1500}
                 value={formData.request}
                 onChange={handleChange}
                 style={errors.request ? { borderColor: 'hsl(0, 70%, 60%)', boxShadow: '0 0 0 3px hsla(0, 70%, 60%, 0.12)' } : {}}
               ></textarea>
             </div>
             <button type="submit" className="btn btn-primary btn-full" id="prayer-submit-btn" disabled={isSubmitting}>
-              <span className="btn-text">{isSubmitting ? 'Enviando…' : 'Enviar pedido de oração'}</span>
+              <span className="btn-text">{isSubmitting ? 'Abrindo o Gmail…' : 'Enviar pedido de oração'}</span>
               <span className="btn-icon" aria-hidden="true">→</span>
             </button>
             {showSuccess && (
               <div className="form-success" id="formSuccess" role="alert" aria-live="polite">
-                <span>🙏</span> Recebemos seu pedido! Nossa equipe vai orar por você.
+                <span>🙏</span> Abrimos o Gmail com o seu pedido pronto. É só clicar em <strong>Enviar</strong> para concluir!
               </div>
             )}
           </form>
