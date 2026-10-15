@@ -79,6 +79,7 @@ function App() {
       '.event-card',
       '.baptism-content',
       '.baptism-visual',
+      '.baptism-cta',
       '.mykids-content',
     ]
 
