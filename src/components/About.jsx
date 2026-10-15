@@ -11,7 +11,7 @@ export default function About() {
           </div>
           <div className="about-figure">
             <div className="about-img-wrap">
-              <img src="assets/images/general/ibpv_atualmente.png" alt="Fachada da Igreja Batista Pedra Viva" className="about-img" loading="lazy" />
+              <img src="assets/images/general/ibpv_atualmente.png" alt="Fachada da Igreja Batista Pedra Viva" className="about-img" loading="lazy" decoding="async" />
             </div>
             <div className="about-stat-card">
               <span className="stat-number">1986</span>
