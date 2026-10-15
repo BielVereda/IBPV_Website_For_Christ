@@ -5,10 +5,11 @@ export default function MyKids() {
         <div className="mykids-content">
           <div className="mykids-info">
             <span className="section-eyebrow">Projeto Boa Terra</span>
-            <h2 className="section-title">Baixe o App MyKids</h2>
+            <h2 className="section-title">Baixe o aplicativo</h2>
             <p className="section-desc">
-              O MyKids é o aplicativo que utilizamos para fazer o gerenciamento das crianças que participam das aulas na salinha do Projeto Boa Terra. Com ele, você pode:
+              Para gerenciar as crianças que participam das aulas na salinha do Projeto Boa Terra, utilizamos o aplicativo <strong>MyKids</strong>.
             </p>
+            <p className="mykids-lead">Com ele, você pode:</p>
 
             <ul className="mykids-features">
               <li className="feature-item">
