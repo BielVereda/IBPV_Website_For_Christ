@@ -3675,3 +3675,50 @@ body { font-weight: 400; line-height: 1.65; }
   [data-reveal].revealed { animation: none; }
   .events-track { transition: none; }
 }
+
+/* =====================================================
+   AJUSTES (MyKids, ao vivo, agenda mobile)
+   ===================================================== */
+
+/* MyKids: nome do app em destaque amarelo no texto */
+.mykids-info .section-desc strong {
+  color: var(--clr-yellow-400);
+  font-weight: 700;
+}
+
+/* Cultos: ondas de sinal (a animação fica dentro do próprio SVG) */
+.live-signal {
+  flex-shrink: 0;
+  margin-right: var(--space-2);
+  overflow: visible;
+}
+
+/* Agenda no celular: sem setas, só swipe (pontos ficam como indicador) */
+@media (max-width: 767px) {
+  .events-carousel .carousel-btn { display: none; }
+  .events-carousel { padding-bottom: 0; }
+  .events .carousel-dots {
+    margin-top: var(--space-2);
+    height: auto;
+  }
+  .events-track-wrap { touch-action: pan-y; }
+  .events-track { user-select: none; -webkit-user-select: none; }
+  .events-track.dragging { transition: none; }
+  .events-track img { -webkit-user-drag: none; }
+}
+
+
+/* MyKids: "Com ele, você pode:" em linha própria, destaque azul */
+.mykids-info .section-desc { margin-bottom: var(--space-4); }
+.mykids-lead {
+  display: inline-block;
+  width: fit-content;
+  background: linear-gradient(90deg, var(--clr-blue-300), var(--clr-yellow-400));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  font-weight: 700;
+  font-size: var(--text-lg);
+  margin-bottom: var(--space-4);
+}
