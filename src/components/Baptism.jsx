@@ -49,6 +49,8 @@ export default function Baptism() {
                 src="assets/images/dates/batismo.png"
                 alt="Batismo na Igreja"
                 className="baptism-main-img"
+                loading="lazy"
+                decoding="async"
               />
               <div className="baptism-quote">
                 <blockquote>
