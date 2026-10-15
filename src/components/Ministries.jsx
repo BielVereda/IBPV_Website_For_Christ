@@ -10,8 +10,8 @@ const ministriesData = [
     desc: 'A IBPV fundou o Instituto Pedra Viva e tem ajudado muitas famílias e a comunidade em seu entorno através de ações sociais. São campanhas de doação de roupa, doação de sangue, cursos profissionalizantes e muito mais! Você pode tornar-se um voluntário ou participar das atividades do Instituto Pedra Viva.',
     verseText: '"Não se esqueçam de fazer o bem e de ajudar uns aos outros, porque esses são os sacrifícios que agradam a Deus."',
     verseRef: 'Hebreus 13:16',
-    instagram: 'https://www.instagram.com/ibpedraviva/',
-    instagramHandle: '@ibpedraviva'
+    instagram: 'https://www.instagram.com/pedravivainstituto/',
+    instagramHandle: '@pedravivainstituto'
   },
   {
     id: 'min-oracao-foco',
@@ -22,8 +22,6 @@ const ministriesData = [
     desc: 'Toda terceira sexta-feira do mês, às 20h00, temos nosso culto de oração, o Oração em Foco. Venha interceder pela família, pela nação, pela Igreja!',
     verseText: '"Orai sem cessar."',
     verseRef: '1 Tessalonicenses 5:17',
-    instagram: 'https://www.instagram.com/ibpedraviva/',
-    instagramHandle: '@ibpedraviva'
   },
   {
     id: 'min-55mais',
@@ -34,8 +32,6 @@ const ministriesData = [
     desc: 'Acreditamos que todos têm algo a ensinar ou uma experiência de vida para compartilhar, e nada melhor do que fazer parte de uma turma cheia de histórias para aprender mais. Se você tem 55 anos ou mais, participe dos nossos encontros todo 2º sábado do mês, às 15h00, com palestras, momentos de louvor, adoração, oração e testemunhos.',
     verseText: '"As cãs são uma coroa de glória; elas se obtêm por um caminho de justiça."',
     verseRef: 'Provérbios 16:31',
-    instagram: 'https://www.instagram.com/ibpedraviva/',
-    instagramHandle: '@ibpedraviva'
   },
   {
     id: 'min-casais',
@@ -46,8 +42,6 @@ const ministriesData = [
     desc: 'Nossa Igreja possui um diferencial para quem é casado e busca crescer junto na prática da Palavra de Deus: a Escola Bíblica para Casais, sob a liderança do Pr. Dirceu e sua esposa Cleudete, que acontece todos os domingos, às 9h30. Ao longo do ano também temos atividades especiais, como Congresso e Retiro de Casais.',
     verseText: '"Por isso, o homem deixará seu pai e sua mãe e se unirá à sua mulher, tornando-se os dois uma só carne."',
     verseRef: 'Efésios 5:31',
-    instagram: 'https://www.instagram.com/ibpedraviva/',
-    instagramHandle: '@ibpedraviva'
   },
   {
     id: 'min-mulheres',
@@ -70,8 +64,8 @@ const ministriesData = [
     desc: 'Apoiado em três pilares — o homem e Deus, o homem e a família, e o homem e os negócios — o Ministério de Homens busca auxiliar aquele que é o "cabeça do lar". A Mentoria acontece toda última sexta do mês, às 20h00, com um mentor à frente debatendo assuntos práticos baseados na Palavra de Deus.',
     verseText: '"Sede homens corajosos e fortes. Obedeçam a tudo o que o Senhor, seu Deus, ordenar."',
     verseRef: '1 Reis 2:2-3',
-    instagram: 'https://www.instagram.com/ibpedraviva/',
-    instagramHandle: '@ibpedraviva'
+    instagram: 'https://www.instagram.com/ibpedraviva.homens/',
+    instagramHandle: '@ibpedraviva.homens'
   },
   {
     id: 'min-jovens',
@@ -349,14 +343,16 @@ export default function Ministries() {
                       <p>{min.verseText}</p>
                       <cite>{min.verseRef}</cite>
                     </blockquote>
-                    <div className="min-links">
-                      <a href={min.instagram} target="_blank" rel="noopener noreferrer" className="min-social-btn" aria-label={`Instagram ${min.title}`}>
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-                          <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
-                        </svg>
-                        {min.instagramHandle}
-                      </a>
-                    </div>
+                    {min.instagram && (
+                      <div className="min-links">
+                        <a href={min.instagram} target="_blank" rel="noopener noreferrer" className="min-social-btn" aria-label={`Instagram ${min.title}`}>
+                          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                          </svg>
+                          {min.instagramHandle}
+                        </a>
+                      </div>
+                    )}
                   </div>
                 </div>
               </article>
