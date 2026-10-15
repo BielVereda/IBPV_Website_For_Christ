@@ -27,30 +27,6 @@ export default function Baptism() {
                 </li>
               </ul>
             </div>
-
-            <div className="baptism-cta">
-              <a
-                href="https://docs.google.com/forms/d/e/1FAIpQLSe_EZ7cQDxa1ZPa_6hJ9RHDsQPrYisyuwqmuJsVz9-oBUodJA/viewform"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn btn-primary btn-full"
-              >
-                <img
-                  src="assets/images/icons/form.png"
-                  alt=""
-                  aria-hidden="true"
-                  className="btn-form-icon"
-                  width="22"
-                  height="22"
-                  loading="lazy"
-                  decoding="async"
-                />
-                Inscrever-se via Google Forms
-              </a>
-              <p className="baptism-note">
-                As classes acontecem aos domingos a partir da data de início até a data do batismo.
-              </p>
-            </div>
           </div>
 
           <div className="baptism-visual">
@@ -71,6 +47,30 @@ export default function Baptism() {
                 </blockquote>
               </div>
             </div>
+          </div>
+
+          <div className="baptism-cta">
+            <a
+              href="https://docs.google.com/forms/d/e/1FAIpQLSe_EZ7cQDxa1ZPa_6hJ9RHDsQPrYisyuwqmuJsVz9-oBUodJA/viewform"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn btn-primary btn-full"
+            >
+              <img
+                src="assets/images/icons/form.png"
+                alt=""
+                aria-hidden="true"
+                className="btn-form-icon"
+                width="22"
+                height="22"
+                loading="lazy"
+                decoding="async"
+              />
+              Inscrever-se via Google Forms
+            </a>
+            <p className="baptism-note">
+              As classes acontecem aos domingos a partir da data de início até a data do batismo.
+            </p>
           </div>
         </div>
       </div>
