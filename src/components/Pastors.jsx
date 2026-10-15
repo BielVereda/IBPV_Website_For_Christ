@@ -14,7 +14,7 @@ export default function Pastors() {
 
           <article className="pastor-card" id="pastor-dimas">
             <div className="pastor-img-wrap">
-              <img src="assets/images/pastores/pastor-dimas.jpg" alt="Pr. Dimas Paulino, Pastor Sênior da IBPV" className="pastor-img" loading="lazy" />
+              <img src="assets/images/pastores/pastor-dimas.jpg" alt="Pr. Dimas Paulino, Pastor Sênior da IBPV" className="pastor-img" loading="lazy" decoding="async" />
             </div>
             <div className="pastor-info">
               <span className="pastor-role">Pastor Sênior</span>
@@ -27,7 +27,7 @@ export default function Pastors() {
 
           <article className="pastor-card" id="pastor-luis">
             <div className="pastor-img-wrap">
-              <img src="assets/images/pastores/pastor-luis.jpg" alt="Pr. Luís Henrique, Pastor de Ministérios da IBPV" className="pastor-img" loading="lazy" />
+              <img src="assets/images/pastores/pastor-luis.jpg" alt="Pr. Luís Henrique, Pastor de Ministérios da IBPV" className="pastor-img" loading="lazy" decoding="async" />
             </div>
             <div className="pastor-info">
               <span className="pastor-role">Pastor de Ministérios</span>
@@ -40,7 +40,7 @@ export default function Pastors() {
 
           <article className="pastor-card" id="pastor-hugo">
             <div className="pastor-img-wrap">
-              <img src="assets/images/pastores/pastor-hugo.jpg" alt="Pr. Hugo Mello, Pastor de Missionários da IBPV" className="pastor-img" loading="lazy" />
+              <img src="assets/images/pastores/pastor-hugo.jpg" alt="Pr. Hugo Mello, Pastor de Missionários da IBPV" className="pastor-img" loading="lazy" decoding="async" />
             </div>
             <div className="pastor-info">
               <span className="pastor-role">Pastor de Missionários</span>
