@@ -59,7 +59,24 @@ export default function Cultos() {
             <p>Transmitimos o culto das 11h ao vivo pelo YouTube com tradução em Libras!</p>
           </div>
           <a href="https://www.youtube.com/igrejabatistapedraviva" target="_blank" rel="noopener noreferrer" className="btn btn-primary" id="youtube-link-btn">
-            <span className="live-dot" aria-hidden="true"></span>
+            <svg className="live-signal" width="32" height="18" viewBox="0 0 32 18" fill="none" aria-hidden="true">
+              <path d="M9.34 2.34A9 9 0 0 0 9.34 15.66" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" opacity="0.3">
+                <animate attributeName="opacity" values="0.3;1;0.3" dur="1.6s" begin="0.35s" repeatCount="indefinite" />
+              </path>
+              <path d="M11.6 5.1A5.2 5.2 0 0 0 11.6 12.9" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" opacity="0.3">
+                <animate attributeName="opacity" values="0.3;1;0.3" dur="1.6s" begin="0s" repeatCount="indefinite" />
+              </path>
+              <circle cx="16" cy="9" r="2.6" fill="currentColor">
+                <animate attributeName="opacity" values="1;0.35;1" dur="1.6s" repeatCount="indefinite" />
+                <animate attributeName="r" values="2.6;2;2.6" dur="1.6s" repeatCount="indefinite" />
+              </circle>
+              <path d="M20.4 5.1A5.2 5.2 0 0 1 20.4 12.9" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" opacity="0.3">
+                <animate attributeName="opacity" values="0.3;1;0.3" dur="1.6s" begin="0s" repeatCount="indefinite" />
+              </path>
+              <path d="M22.66 2.34A9 9 0 0 1 22.66 15.66" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" opacity="0.3">
+                <animate attributeName="opacity" values="0.3;1;0.3" dur="1.6s" begin="0.35s" repeatCount="indefinite" />
+              </path>
+            </svg>
             Assistir ao vivo
           </a>
         </div>
