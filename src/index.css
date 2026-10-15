@@ -454,6 +454,7 @@ select {
 
 .nav-link.active {
   color: var(--clr-yellow-400);
+  font-weight: bold;
 }
 
 .navbar.scrolled .nav-link {
@@ -4276,4 +4277,29 @@ body {
 .event-meta-icon--time {
   width: 22px;
   height: 22px;
+}
+/* Rodapé (celular): logo, frase e redes sociais centralizados */
+@media (max-width: 639px) {
+  .footer-brand {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-logo {
+    justify-content: center;
+  }
+
+  .footer-tagline {
+    max-width: none;
+    margin-left: auto;
+    margin-right: auto;
+    white-space: nowrap;
+    font-size: clamp(0.75rem, 3.6vw, 0.875rem);
+  }
+
+  .footer-social {
+    justify-content: center;
+  }
 }
