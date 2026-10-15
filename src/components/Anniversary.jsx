@@ -6,8 +6,14 @@ export default function Anniversary() {
           <div className="anniversary-badge">
             <span>Outubro Especial</span>
           </div>
-          <h2 className="anniversary-title">
-            Celebrando <strong>40 Anos</strong> de História
+          <h2 className="anniversary-title anniversary-title--logo">
+            <img
+              src="assets/images/general/logo-40-anos.png"
+              alt="Celebrando 40 anos de história"
+              className="anniversary-logo"
+              loading="lazy"
+              decoding="async"
+            />
           </h2>
           <p className="anniversary-desc">
             Neste mês de outubro, a Igreja Batista Pedra Viva completa 40 anos de história, fé e amor.
