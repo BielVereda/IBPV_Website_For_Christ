@@ -68,7 +68,6 @@ export default function Events() {
         </div>
 
         <div className="events-carousel">
-          {!isMobile && (
           <button
             className="carousel-btn carousel-btn--prev"
             onClick={prevSlide}
@@ -78,7 +77,6 @@ export default function Events() {
               <path d="M15 18l-6-6 6-6"/>
             </svg>
           </button>
-          )}
 
           <div className="events-track-wrap">
             <div
@@ -96,8 +94,26 @@ export default function Events() {
                       <p className="event-desc">{event.description}</p>
                       {event.date && (
                         <div className="event-meta">
-                          <span className="event-date">📅 {event.date}</span>
-                          <span className="event-time">⏰ {event.time}</span>
+                          <span className="event-date">
+                            <span
+                              className="event-meta-icon event-meta-icon--date"
+                              aria-hidden="true"
+                              style={{
+                                '--icon-url': `url("${import.meta.env.BASE_URL}assets/images/icons/calendario.png")`,
+                              }}
+                            />
+                            {event.date}
+                          </span>
+                          <span className="event-time">
+                            <span
+                              className="event-meta-icon event-meta-icon--time"
+                              aria-hidden="true"
+                              style={{
+                                '--icon-url': `url("${import.meta.env.BASE_URL}assets/images/icons/relogio.png")`,
+                              }}
+                            />
+                            {event.time}
+                          </span>
                         </div>
                       )}
                       {event.instagram && (
@@ -129,7 +145,6 @@ export default function Events() {
             </div>
           </div>
 
-          {!isMobile && (
           <button
             className="carousel-btn carousel-btn--next"
             onClick={nextSlide}
@@ -139,7 +154,6 @@ export default function Events() {
               <path d="M9 18l6-6-6-6"/>
             </svg>
           </button>
-          )}
         </div>
 
         <div className="carousel-dots">
