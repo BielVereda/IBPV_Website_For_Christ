@@ -3722,3 +3722,30 @@ body { font-weight: 400; line-height: 1.65; }
   font-size: var(--text-lg);
   margin-bottom: var(--space-4);
 }
+
+/* Batismo: ícone à esquerda do botão de inscrição */
+.baptism-cta .btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-3);
+}
+.btn-form-icon {
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+/* Aniversário: logo dos 40 anos (PNG branco) no lugar do título em texto */
+.anniversary-title--logo {
+  line-height: 0;
+  margin-bottom: var(--space-6);
+  display: flex;
+  justify-content: center;
+}
+.anniversary-logo {
+  display: block;
+  width: clamp(150px, 34vw, 200px);
+  height: auto;
+}
