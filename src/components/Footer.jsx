@@ -19,7 +19,7 @@ export default function Footer() {
 
             <div className="footer-brand">
               <a href="#inicio" className="footer-logo" aria-label="Igreja Batista Pedra Viva">
-                <img src="assets/images/icons/logo-ibpv-branca.png" alt="Igreja Batista Pedra Viva" className="footer-logo-img" loading="lazy" />
+                <img src="assets/images/icons/logo-ibpv-branca.png" alt="Igreja Batista Pedra Viva" className="footer-logo-img" loading="lazy" decoding="async" />
               </a>
               <p className="footer-tagline">Uma Igreja que ama, acolhe &amp; discipula.</p>
               <div className="footer-social" aria-label="Redes sociais">
@@ -36,7 +36,7 @@ export default function Footer() {
                   <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.16c-5.43 0-9.84 4.41-9.84 9.84 0 1.73.45 3.37 1.25 4.8L2.06 21.94l5.29-1.39a9.78 9.78 0 004.65 1.17c5.43 0 9.84-4.41 9.84-9.84S17.43 2.16 12 2.16zm5.55 13.56c-.23.64-1.28 1.18-1.8 1.25-.49.07-1.12.1-3.23-.77-2.54-1.04-4.18-3.64-4.31-3.81-.13-.17-1.03-1.37-1.03-2.61s.64-1.84.87-2.07c.23-.23.51-.29.68-.29.17 0 .34 0 .49.01.15.01.37-.06.58.45.21.51.73 1.78.8 1.93.06.15.11.33.02.51-.1.17-.15.28-.29.45-.15.15-.31.33-.43.45-.14.13-.29.28-.13.56.16.28.73 1.21 1.57 1.96.86.77 1.78 1.05 2.06 1.18.28.13.45.11.62-.08.17-.2.72-.84.92-1.13.2-.29.39-.24.64-.15.25.1 1.62.77 1.9.9.28.13.47.2.54.31.06.11.06.66-.17 1.3z"/></svg>
                 </a>
                 <a href="https://linktr.ee/ibpedraviva" target="_blank" rel="noopener noreferrer" className="social-link" id="social-linktree" aria-label="Linktree IBPV">
-                  <img src="assets/images/icons/linktree-logo-icon.png" alt="Linktree" width="18" height="18" />
+                  <img src="assets/images/icons/linktree-logo-icon.png" alt="Linktree" width="18" height="18" loading="lazy" decoding="async" />
                 </a>
               </div>
             </div>
