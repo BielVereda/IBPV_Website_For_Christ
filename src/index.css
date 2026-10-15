@@ -4113,21 +4113,8 @@ body {
   overflow: visible;
 }
 
-/* Agenda no celular: sem setas, sem swipe; gira sozinha a cada 7s (pontos só indicam) */
+/* Agenda no celular: setas (embaixo, ao lado dos pontos), sem swipe; também gira sozinha a cada 7s */
 @media (max-width: 767px) {
-  .events-carousel .carousel-btn {
-    display: none;
-  }
-
-  .events-carousel {
-    padding-bottom: 0;
-  }
-
-  .events .carousel-dots {
-    margin-top: var(--space-2);
-    height: auto;
-  }
-
   .events-track-wrap {
     touch-action: pan-y;
   }
@@ -4260,4 +4247,33 @@ body {
     background: var(--clr-blue-500);
     box-shadow: 0 8px 24px hsla(200, 90%, 50%, 0.3);
   }
+}
+
+/* Agenda: ícones (imagem) de data e horário no lugar dos emojis */
+.event-date,
+.event-time {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+/* Ícone pintado com a cor do texto (amarelo) via máscara do PNG */
+.event-meta-icon {
+  display: inline-block;
+  flex-shrink: 0;
+  background-color: currentColor;
+  -webkit-mask: var(--icon-url) center / contain no-repeat;
+  mask: var(--icon-url) center / contain no-repeat;
+}
+
+/* Tamanhos ajustados para os dois ícones parecerem do mesmo tamanho
+   (o PNG do calendário tem mais margem interna que o do relógio) */
+.event-meta-icon--date {
+  width: 27px;
+  height: 27px;
+}
+
+.event-meta-icon--time {
+  width: 22px;
+  height: 22px;
 }
