@@ -64,6 +64,7 @@ export default function Navbar() {
     { id: 'cultos', label: 'Nossos Cultos' },
     { id: 'batismo', label: 'Batismo' },
     { id: 'oracao', label: 'Pedido de Oração' },
+    { id: 'oferta', label: 'Dízimos & Ofertas' },
   ];
 
   return (
@@ -100,11 +101,6 @@ export default function Navbar() {
                 </a>
               </li>
             ))}
-            <li>
-              <a href="#oferta" className={`nav-link nav-cta ${activeSection === 'oferta' ? 'active' : ''}`} onClick={closeMenu}>
-                Dízimos & Oferta
-              </a>
-            </li>
           </ul>
         </nav>
       </div>
