@@ -4303,3 +4303,188 @@ body {
     justify-content: center;
   }
 }
+
+
+/* =====================================================
+   TABLET
+   ===================================================== */
+
+/* 1) Pastores: carrossel (rolagem por toque + pontinhos) */
+.pastors-dots {
+  display: none;
+}
+
+@media (min-width: 640px) and (max-width: 1023px) {
+  .pastors-grid {
+    display: flex;
+    gap: var(--space-6);
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    padding: var(--space-2) 0 var(--space-4);
+  }
+
+  .pastors-grid::-webkit-scrollbar {
+    display: none;
+  }
+
+  .pastors-grid .pastor-card,
+  .pastors-grid .pastor-card:last-child:nth-child(odd) {
+    flex: 0 0 calc(50% - var(--space-3));
+    max-width: none;
+    width: auto;
+    grid-column: auto;
+    justify-self: auto;
+    scroll-snap-align: start;
+  }
+
+  .pastors-dots {
+    display: flex;
+    justify-content: center;
+    gap: var(--space-2);
+    margin-top: var(--space-4);
+  }
+
+  .pastors-dots .carousel-dot {
+    background: rgba(255, 255, 255, 0.35);
+  }
+
+  .pastors-dots .carousel-dot.active {
+    background: var(--clr-yellow-400);
+  }
+}
+
+/* 2) Ministérios: sem setas, só toque (e pontinhos) */
+@media (max-width: 1023px) {
+  .carousel-wrapper > .carousel-btn {
+    display: none;
+  }
+
+  .carousel-wrapper {
+    padding: 0 var(--space-4);
+  }
+}
+
+/* 3) Batismo: requisitos ao lado da imagem */
+@media (min-width: 640px) and (max-width: 899px) {
+  .baptism-grid {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "content visual"
+      "cta     visual";
+    grid-template-rows: auto auto;
+    column-gap: var(--space-8);
+    row-gap: 0;
+    align-items: stretch;
+    text-align: left;
+  }
+
+  .baptism-content {
+    align-self: end;
+  }
+
+  .baptism-visual {
+    align-self: center;
+    justify-content: flex-end;
+  }
+
+  .baptism-gallery {
+    margin: 0;
+  }
+
+  .baptism-cta {
+    align-self: start;
+    margin-top: var(--space-6);
+  }
+}
+
+/* 4) Pedido de oração: textos centralizados e título em uma linha */
+@media (min-width: 640px) and (max-width: 899px) {
+  .prayer-content {
+    text-align: center;
+  }
+
+  .prayer-content .section-eyebrow {
+    display: flex;
+    justify-content: center;
+  }
+
+  .prayer-content .section-eyebrow::before {
+    display: none;
+  }
+
+  .prayer-content .section-title {
+    white-space: nowrap;
+  }
+
+  .prayer-content .section-title br {
+    display: none;
+  }
+
+  .prayer-content .section-desc {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .prayer-promises {
+    align-items: center;
+  }
+}
+
+/* 5) Rodapé: logo, frase e redes centralizados (igual ao celular) */
+@media (min-width: 640px) and (max-width: 1023px) {
+  .footer-brand {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-logo {
+    justify-content: center;
+  }
+
+  .footer-tagline {
+    max-width: none;
+    margin-left: auto;
+    margin-right: auto;
+    white-space: nowrap;
+  }
+
+  .footer-social {
+    justify-content: center;
+  }
+}
+
+
+/* Agenda (celular): setas na lateral do card, card um pouco menor */
+@media (max-width: 767px) {
+  .events-carousel {
+    padding: 0 2.25rem;
+  }
+
+  .events-carousel .carousel-btn {
+    top: 50%;
+    bottom: auto;
+    transform: translateY(-50%);
+    width: 32px;
+    height: 32px;
+  }
+
+  .events-carousel .carousel-btn--prev {
+    left: 0;
+    right: auto;
+  }
+
+  .events-carousel .carousel-btn--next {
+    right: 0;
+    left: auto;
+  }
+
+  .events .carousel-dots {
+    margin-top: var(--space-2);
+    height: auto;
+    position: static;
+  }
+}
