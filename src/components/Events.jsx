@@ -1,7 +1,13 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 
 export default function Events() {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [isMobile, setIsMobile] = useState(
+    () => typeof window !== 'undefined' && window.matchMedia('(max-width: 767px)').matches
+  );
+  const [dragX, setDragX] = useState(0);
+  const [isDragging, setIsDragging] = useState(false);
+  const dragRef = useRef({ active: false, startX: 0, startY: 0, locked: false });
 
   const events = [
     {
@@ -36,10 +42,66 @@ export default function Events() {
     setCurrentIndex((prev) => (prev - 1 + events.length) % events.length);
   };
 
+  // Detecta celular (<768px)
   useEffect(() => {
-    const interval = setInterval(nextSlide, 5000);
-    return () => clearInterval(interval);
+    const mq = window.matchMedia('(max-width: 767px)');
+    const onChange = (e) => setIsMobile(e.matches);
+    setIsMobile(mq.matches);
+    mq.addEventListener('change', onChange);
+    return () => mq.removeEventListener('change', onChange);
   }, []);
+
+  // Passagem automática só no desktop/tablet; no celular só pelo toque
+  useEffect(() => {
+    if (isMobile) return;
+    const interval = setInterval(nextSlide, 8000);
+    return () => clearInterval(interval);
+  }, [isMobile]);
+
+  // Swipe com o dedo (celular)
+  const handlePointerDown = (e) => {
+    if (e.pointerType === 'mouse') return;
+    dragRef.current = { active: true, startX: e.clientX, startY: e.clientY, locked: false };
+  };
+
+  const handlePointerMove = (e) => {
+    const d = dragRef.current;
+    if (!d.active) return;
+    const dx = e.clientX - d.startX;
+    const dy = e.clientY - d.startY;
+
+    if (!d.locked) {
+      if (Math.abs(dx) < 8 && Math.abs(dy) < 8) return;
+      if (Math.abs(dy) > Math.abs(dx)) {
+        d.active = false; // era rolagem vertical da página
+        return;
+      }
+      d.locked = true;
+      setIsDragging(true);
+      e.currentTarget.setPointerCapture?.(e.pointerId);
+    }
+
+    const atStart = currentIndex === 0 && dx > 0;
+    const atEnd = currentIndex === events.length - 1 && dx < 0;
+    setDragX(atStart || atEnd ? dx * 0.3 : dx);
+  };
+
+  const endDrag = (e, cancelled = false) => {
+    const d = dragRef.current;
+    if (!d.active) return;
+    const wasLocked = d.locked;
+    dragRef.current = { active: false, startX: 0, startY: 0, locked: false };
+    if (!wasLocked) return;
+
+    const dx = e.clientX - d.startX;
+    setIsDragging(false);
+    setDragX(0);
+    if (cancelled) return;
+
+    const threshold = 60;
+    if (dx < -threshold && currentIndex < events.length - 1) setCurrentIndex(currentIndex + 1);
+    else if (dx > threshold && currentIndex > 0) setCurrentIndex(currentIndex - 1);
+  };
 
   return (
     <section className="events" id="eventos" aria-label="Eventos da Igreja">
@@ -53,6 +115,7 @@ export default function Events() {
         </div>
 
         <div className="events-carousel">
+          {!isMobile && (
           <button
             className="carousel-btn carousel-btn--prev"
             onClick={prevSlide}
@@ -62,11 +125,16 @@ export default function Events() {
               <path d="M15 18l-6-6 6-6"/>
             </svg>
           </button>
+          )}
 
           <div className="events-track-wrap">
             <div
-              className="events-track"
-              style={{ transform: `translateX(-${currentIndex * 100}%)` }}
+              className={`events-track ${isDragging ? 'dragging' : ''}`}
+              onPointerDown={handlePointerDown}
+              onPointerMove={handlePointerMove}
+              onPointerUp={(e) => endDrag(e)}
+              onPointerCancel={(e) => endDrag(e, true)}
+              style={{ transform: `translateX(calc(-${currentIndex * 100}% + ${dragX}px))` }}
             >
               {events.map((event) => (
                 <div key={event.id} className="event-card">
@@ -102,6 +170,8 @@ export default function Events() {
                         src={event.image}
                         alt={event.title}
                         className="event-img"
+                        loading="lazy"
+                        decoding="async"
                       />
                     </div>
                   </div>
@@ -110,6 +180,7 @@ export default function Events() {
             </div>
           </div>
 
+          {!isMobile && (
           <button
             className="carousel-btn carousel-btn--next"
             onClick={nextSlide}
@@ -119,6 +190,7 @@ export default function Events() {
               <path d="M9 18l6-6-6-6"/>
             </svg>
           </button>
+          )}
         </div>
 
         <div className="carousel-dots">
