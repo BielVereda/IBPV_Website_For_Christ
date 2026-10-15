@@ -114,7 +114,7 @@ export default function Donation() {
             </div>
             <h3>Presencialmente</h3>
             <p>Traga sua oferta ao culto</p>
-            <p className="oferta-detail">Os dízimos e ofertas são recebidos em todos os nossos cultos semanais. Venha adorar a Deus e contribuir com nossa missão!</p>
+            <p className="oferta-detail">Caso você prefira entregar sua oferta presencialmente, temos gazofilácios disponíveis na igreja!</p>
           </div>
 
         </div>
