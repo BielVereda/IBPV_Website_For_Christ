@@ -113,6 +113,7 @@ const ministriesData = [
     id: 'min-discipulado',
     title: 'Discipulado',
     bgGradient: 'linear-gradient(135deg, hsl(263,70%,16%) 0%, hsl(250,60%,35%) 100%)',
+    bgImage: 'assets/images/ministerios/discipulado.jpeg',
     logo: 'assets/images/ministerios/logo-discipulado.png',
     desc: 'O Ministério de Discipulado da IBPV existe para acompanhar membros e novos membros em sua jornada de fé. Aqui você encontrará um ambiente seguro para crescer, aprender e ser envolvido na missão da Igreja, sendo guiado por mentores comprometidos com a Palavra de Deus.',
     verseText: '"Ide, portanto, e fazei discípulos de todas as nações, batizando-os em nome do Pai, do Filho e do Espírito Santo."',
@@ -124,6 +125,7 @@ const ministriesData = [
     id: 'min-esportes',
     title: 'Atividades Esportivas',
     bgGradient: 'linear-gradient(135deg, hsl(15,70%,22%) 0%, hsl(263,55%,36%) 100%)',
+    bgImage: 'assets/images/ministerios/atividades_esportivas.jpeg',
     logo: 'assets/images/ministerios/logo-esportes.png',
     desc: 'A IBPV acredita que o esporte é uma poderosa ferramenta de evangelismo e comunhão. Organizamos eventos e campeonatos de futebol, vôlei e muito mais! Uma maneira divertida de criar laços, fazer amigos e viver a fé fora dos quatro cantos da Igreja.',
     verseText: '"Todo aquele que compete nos jogos se abstém de tudo. Eles fazem isso para obter uma coroa que não dura; mas nós o fazemos para obter uma coroa que durará para sempre."',
@@ -138,6 +140,30 @@ export default function Ministries() {
   const [visibleCards, setVisibleCards] = useState(1);
   const [cardWidth, setCardWidth] = useState(0);
   const trackRef = useRef(null);
+  const sectionRef = useRef(null);
+
+  // Carregamento sob demanda das imagens de fundo: só quando a seção chega perto da tela
+  const [nearViewport, setNearViewport] = useState(false);
+  const [furthestSeen, setFurthestSeen] = useState(0);
+
+  useEffect(() => {
+    const el = sectionRef.current;
+    if (!el || typeof IntersectionObserver === 'undefined') {
+      setNearViewport(true);
+      return;
+    }
+    const obs = new IntersectionObserver(
+      (entries) => {
+        if (entries.some((en) => en.isIntersecting)) {
+          setNearViewport(true);
+          obs.disconnect();
+        }
+      },
+      { rootMargin: '300px 0px' }
+    );
+    obs.observe(el);
+    return () => obs.disconnect();
+  }, []);
 
   const getVisibleCards = () => {
     if (window.matchMedia('(min-width: 1024px)').matches) return 3;
@@ -158,6 +184,11 @@ export default function Ministries() {
   }, []);
 
   const maxIndex = Math.max(0, ministriesData.length - visibleCards);
+
+  // Carrega os cards visíveis + 1 à frente; o que já foi carregado não volta atrás
+  useEffect(() => {
+    setFurthestSeen((prev) => Math.max(prev, currentIndex + visibleCards));
+  }, [currentIndex, visibleCards]);
 
   // Auto-correct current index if resizing reduces max index
   useEffect(() => {
@@ -241,7 +272,7 @@ export default function Ministries() {
   const translateX = currentIndex * (cardWidth + gap);
 
   return (
-    <section className="ministerios" id="ministerios" aria-labelledby="ministerios-heading">
+    <section className="ministerios" id="ministerios" aria-labelledby="ministerios-heading" ref={sectionRef}>
       <div className="container">
         <div className="section-header">
           <span className="section-eyebrow">Faça parte</span>
@@ -286,7 +317,7 @@ export default function Ministries() {
             onPointerCancel={(e) => endDrag(e, true)}
             style={{ transform: `translateX(${-translateX + dragX}px)` }}
           >
-            {ministriesData.map((min) => (
+            {ministriesData.map((min, i) => (
               <article
                 className="ministry-card"
                 role="listitem"
@@ -294,7 +325,7 @@ export default function Ministries() {
                 key={min.id}
                 style={{
                   '--min-bg': min.bgGradient,
-                  '--min-bg-image': min.bgImage ? `url("${import.meta.env.BASE_URL}${encodeURI(min.bgImage)}")` : 'none'
+                  '--min-bg-image': (min.bgImage && nearViewport && i <= furthestSeen) ? `url("${import.meta.env.BASE_URL}${encodeURI(min.bgImage)}")` : 'none'
                 }}
               >
                 <div className="min-overlay"></div>
@@ -305,6 +336,8 @@ export default function Ministries() {
                         className="min-logo-img"
                         src={min.logo}
                         alt={`Logo ${min.title}`}
+                        loading="lazy"
+                        decoding="async"
                         onError={(e) => { e.target.style.display = 'none'; }}
                       />
                     </div>
