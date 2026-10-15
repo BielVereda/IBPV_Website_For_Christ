@@ -1,14 +1,10 @@
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect } from 'react';
 
 export default function Events() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isMobile, setIsMobile] = useState(
     () => typeof window !== 'undefined' && window.matchMedia('(max-width: 767px)').matches
   );
-  const [dragX, setDragX] = useState(0);
-  const [isDragging, setIsDragging] = useState(false);
-  const dragRef = useRef({ active: false, startX: 0, startY: 0, locked: false });
-
   const events = [
     {
       id: 1,
@@ -51,57 +47,14 @@ export default function Events() {
     return () => mq.removeEventListener('change', onChange);
   }, []);
 
-  // Passagem automática só no desktop/tablet; no celular só pelo toque
+  // Passagem automática: 7s no celular, 8s no desktop/tablet.
+  // O temporizador reinicia a cada troca de slide.
+  // No celular não há swipe nem toque nos pontos: o carrossel gira sozinho.
   useEffect(() => {
-    if (isMobile) return;
-    const interval = setInterval(nextSlide, 8000);
-    return () => clearInterval(interval);
-  }, [isMobile]);
-
-  // Swipe com o dedo (celular)
-  const handlePointerDown = (e) => {
-    if (e.pointerType === 'mouse') return;
-    dragRef.current = { active: true, startX: e.clientX, startY: e.clientY, locked: false };
-  };
-
-  const handlePointerMove = (e) => {
-    const d = dragRef.current;
-    if (!d.active) return;
-    const dx = e.clientX - d.startX;
-    const dy = e.clientY - d.startY;
-
-    if (!d.locked) {
-      if (Math.abs(dx) < 8 && Math.abs(dy) < 8) return;
-      if (Math.abs(dy) > Math.abs(dx)) {
-        d.active = false; // era rolagem vertical da página
-        return;
-      }
-      d.locked = true;
-      setIsDragging(true);
-      e.currentTarget.setPointerCapture?.(e.pointerId);
-    }
-
-    const atStart = currentIndex === 0 && dx > 0;
-    const atEnd = currentIndex === events.length - 1 && dx < 0;
-    setDragX(atStart || atEnd ? dx * 0.3 : dx);
-  };
-
-  const endDrag = (e, cancelled = false) => {
-    const d = dragRef.current;
-    if (!d.active) return;
-    const wasLocked = d.locked;
-    dragRef.current = { active: false, startX: 0, startY: 0, locked: false };
-    if (!wasLocked) return;
-
-    const dx = e.clientX - d.startX;
-    setIsDragging(false);
-    setDragX(0);
-    if (cancelled) return;
-
-    const threshold = 60;
-    if (dx < -threshold && currentIndex < events.length - 1) setCurrentIndex(currentIndex + 1);
-    else if (dx > threshold && currentIndex > 0) setCurrentIndex(currentIndex - 1);
-  };
+    const delay = isMobile ? 7000 : 8000;
+    const timer = setTimeout(nextSlide, delay);
+    return () => clearTimeout(timer);
+  }, [currentIndex, isMobile]);
 
   return (
     <section className="events" id="eventos" aria-label="Eventos da Igreja">
@@ -129,12 +82,8 @@ export default function Events() {
 
           <div className="events-track-wrap">
             <div
-              className={`events-track ${isDragging ? 'dragging' : ''}`}
-              onPointerDown={handlePointerDown}
-              onPointerMove={handlePointerMove}
-              onPointerUp={(e) => endDrag(e)}
-              onPointerCancel={(e) => endDrag(e, true)}
-              style={{ transform: `translateX(calc(-${currentIndex * 100}% + ${dragX}px))` }}
+              className="events-track"
+              style={{ transform: `translateX(-${currentIndex * 100}%)` }}
             >
               {events.map((event) => (
                 <div key={event.id} className="event-card">
@@ -199,6 +148,8 @@ export default function Events() {
               key={index}
               className={`carousel-dot ${index === currentIndex ? 'active' : ''}`}
               onClick={() => setCurrentIndex(index)}
+              disabled={isMobile}
+              tabIndex={isMobile ? -1 : 0}
               aria-label={`Ir para evento ${index + 1}`}
             />
           ))}
