@@ -35,6 +35,16 @@ export default function Baptism() {
                 rel="noopener noreferrer"
                 className="btn btn-primary btn-full"
               >
+                <img
+                  src="assets/images/icons/form.png"
+                  alt=""
+                  aria-hidden="true"
+                  className="btn-form-icon"
+                  width="22"
+                  height="22"
+                  loading="lazy"
+                  decoding="async"
+                />
                 Inscrever-se via Google Forms
               </a>
               <p className="baptism-note">
