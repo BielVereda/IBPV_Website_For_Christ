@@ -279,9 +279,9 @@ select {
 }
 
 @media (hover: hover) and (pointer: fine) and (min-width: 768px) {
-.btn:hover::before {
-  opacity: 1;
-}
+  .btn:hover::before {
+    opacity: 1;
+  }
 }
 
 .btn:active {
@@ -295,11 +295,11 @@ select {
 }
 
 @media (hover: hover) and (pointer: fine) and (min-width: 768px) {
-.btn-primary:hover {
-  background: var(--clr-blue-500);
-  box-shadow: 0 12px 40px hsla(200, 90%, 50%, 0.35);
-  transform: translateY(-1px);
-}
+  .btn-primary:hover {
+    background: var(--clr-blue-500);
+    box-shadow: 0 12px 40px hsla(200, 90%, 50%, 0.35);
+    transform: translateY(-1px);
+  }
 }
 
 .btn-ghost {
@@ -310,11 +310,11 @@ select {
 }
 
 @media (hover: hover) and (pointer: fine) and (min-width: 768px) {
-.btn-ghost:hover {
-  background: rgba(255, 255, 255, 0.22);
-  border-color: rgba(255, 255, 255, 0.7);
-  transform: translateY(-1px);
-}
+  .btn-ghost:hover {
+    background: rgba(255, 255, 255, 0.22);
+    border-color: rgba(255, 255, 255, 0.7);
+    transform: translateY(-1px);
+  }
 }
 
 .btn-outline-light {
@@ -324,10 +324,10 @@ select {
 }
 
 @media (hover: hover) and (pointer: fine) and (min-width: 768px) {
-.btn-outline-light:hover {
-  background: rgba(255, 255, 255, 0.1);
-  border-color: var(--clr-white);
-}
+  .btn-outline-light:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: var(--clr-white);
+  }
 }
 
 .btn-full {
@@ -346,9 +346,9 @@ select {
 }
 
 @media (hover: hover) and (pointer: fine) and (min-width: 768px) {
-.btn:hover .btn-icon {
-  transform: translateX(3px);
-}
+  .btn:hover .btn-icon {
+    transform: translateX(3px);
+  }
 }
 
 /* =====================================================
@@ -410,11 +410,18 @@ select {
   opacity: 0;
 }
 
-.navbar.scrolled .logo-img--white { opacity: 0; }
-.navbar.scrolled .logo-img--purple { opacity: 1; }
+.navbar.scrolled .logo-img--white {
+  opacity: 0;
+}
+
+.navbar.scrolled .logo-img--purple {
+  opacity: 1;
+}
 
 @media (min-width: 1024px) {
-  .logo-img { height: 46px; }
+  .logo-img {
+    height: 46px;
+  }
 }
 
 /* Nav Menu */
@@ -439,10 +446,10 @@ select {
 }
 
 @media (hover: hover) and (pointer: fine) and (min-width: 768px) {
-.nav-link:hover {
-  color: var(--clr-white);
-  background: rgba(255, 255, 255, 0.12);
-}
+  .nav-link:hover {
+    color: var(--clr-white);
+    background: rgba(255, 255, 255, 0.12);
+  }
 }
 
 .nav-link.active {
@@ -454,10 +461,10 @@ select {
 }
 
 @media (hover: hover) and (pointer: fine) and (min-width: 768px) {
-.navbar.scrolled .nav-link:hover {
-  color: var(--clr-purple-700);
-  background: var(--clr-purple-50);
-}
+  .navbar.scrolled .nav-link:hover {
+    color: var(--clr-purple-700);
+    background: var(--clr-purple-50);
+  }
 }
 
 .navbar.scrolled .nav-link.active {
@@ -477,11 +484,11 @@ select {
 }
 
 @media (hover: hover) and (pointer: fine) and (min-width: 768px) {
-.nav-cta:hover {
-  background: var(--clr-yellow-400) !important;
-  transform: translateY(-1px);
-  box-shadow: 0 4px 16px hsla(46, 90%, 61%, 0.4);
-}
+  .nav-cta:hover {
+    background: var(--clr-yellow-400) !important;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 16px hsla(46, 90%, 61%, 0.4);
+  }
 }
 
 /* Mobile Toggle */
@@ -495,9 +502,9 @@ select {
 }
 
 @media (hover: hover) and (pointer: fine) and (min-width: 768px) {
-.nav-toggle:hover {
-  background: rgba(255, 255, 255, 0.1);
-}
+  .nav-toggle:hover {
+    background: rgba(255, 255, 255, 0.1);
+  }
 }
 
 .burger-line {
@@ -569,11 +576,11 @@ select {
   }
 
   @media (hover: hover) and (pointer: fine) and (min-width: 768px) {
-.nav-link:hover {
-    color: var(--clr-purple-700);
-    background: var(--clr-purple-50);
+    .nav-link:hover {
+      color: var(--clr-purple-700);
+      background: var(--clr-purple-50);
+    }
   }
-}
 
   .nav-cta {
     margin: var(--space-4) 0 0;
@@ -777,9 +784,9 @@ select {
 }
 
 @media (hover: hover) and (pointer: fine) and (min-width: 768px) {
-.about-img-wrap:hover .about-img {
-  transform: scale(1.03);
-}
+  .about-img-wrap:hover .about-img {
+    transform: scale(1.03);
+  }
 }
 
 .about-stat-card {
@@ -911,10 +918,10 @@ select {
 }
 
 @media (hover: hover) and (pointer: fine) and (min-width: 768px) {
-.ministry-card:hover {
-  transform: translateY(-6px);
-  box-shadow: var(--shadow-lg);
-}
+  .ministry-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-lg);
+  }
 }
 
 .min-overlay {
@@ -1021,12 +1028,12 @@ select {
 }
 
 @media (hover: hover) and (pointer: fine) and (min-width: 768px) {
-.min-social-btn:hover {
-  background: var(--clr-blue-500);
-  color: var(--clr-white);
-  border-color: var(--clr-blue-500);
-  transform: translateY(-1px);
-}
+  .min-social-btn:hover {
+    background: var(--clr-blue-500);
+    color: var(--clr-white);
+    border-color: var(--clr-blue-500);
+    transform: translateY(-1px);
+  }
 }
 
 @media (min-width: 768px) {
@@ -1062,12 +1069,12 @@ select {
 }
 
 @media (hover: hover) and (pointer: fine) and (min-width: 768px) {
-.carousel-btn:hover {
-  background: var(--clr-blue-500);
-  color: var(--clr-white);
-  box-shadow: 0 8px 24px hsla(200, 90%, 50%, 0.3);
-  border-color: transparent;
-}
+  .carousel-btn:hover {
+    background: var(--clr-blue-500);
+    color: var(--clr-white);
+    box-shadow: 0 8px 24px hsla(200, 90%, 50%, 0.3);
+    border-color: transparent;
+  }
 }
 
 .carousel-btn:disabled {
@@ -1175,11 +1182,11 @@ select {
 }
 
 @media (hover: hover) and (pointer: fine) and (min-width: 768px) {
-.pastor-card:hover {
-  background: rgba(255, 255, 255, 0.1);
-  transform: translateY(-4px);
-  box-shadow: 0 20px 60px hsla(200, 90%, 50%, 0.2);
-}
+  .pastor-card:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(-4px);
+    box-shadow: 0 20px 60px hsla(200, 90%, 50%, 0.2);
+  }
 }
 
 .pastor-img-wrap {
@@ -1196,9 +1203,9 @@ select {
 }
 
 @media (hover: hover) and (pointer: fine) and (min-width: 768px) {
-.pastor-card:hover .pastor-img {
-  transform: scale(1.04);
-}
+  .pastor-card:hover .pastor-img {
+    transform: scale(1.04);
+  }
 }
 
 .pastor-info {
@@ -1280,11 +1287,11 @@ select {
 }
 
 @media (hover: hover) and (pointer: fine) and (min-width: 768px) {
-.feature-item:hover {
-  border-color: var(--clr-blue-300);
-  box-shadow: 0 8px 24px hsla(200, 90%, 50%, 0.15);
-  transform: translateX(4px);
-}
+  .feature-item:hover {
+    border-color: var(--clr-blue-300);
+    box-shadow: 0 8px 24px hsla(200, 90%, 50%, 0.15);
+    transform: translateX(4px);
+  }
 }
 
 .feature-icon {
@@ -1441,38 +1448,39 @@ select {
 }
 
 @media (hover: hover) and (pointer: fine) and (min-width: 768px) {
-.culto-card:hover::before {
-  opacity: 1;
-}
-}
-
-@media (hover: hover) and (pointer: fine) and (min-width: 768px) {
-.culto-card:hover {
-  transform: translateY(-6px);
-  box-shadow: var(--shadow-lg);
-  border-color: transparent;
-}
+  .culto-card:hover::before {
+    opacity: 1;
+  }
 }
 
 @media (hover: hover) and (pointer: fine) and (min-width: 768px) {
-.culto-card:hover .culto-day-badge,
-.culto-card:hover .culto-name,
-.culto-card:hover .culto-time,
-.culto-card:hover .culto-desc {
-  color: var(--clr-white);
-}
-}
-
-@media (hover: hover) and (pointer: fine) and (min-width: 768px) {
-.culto-card:hover .culto-day-badge {
-  background: rgba(255, 255, 255, 0.15);
-}
+  .culto-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-lg);
+    border-color: transparent;
+  }
 }
 
 @media (hover: hover) and (pointer: fine) and (min-width: 768px) {
-.culto-card:hover .culto-icon {
-  color: var(--clr-white);
+
+  .culto-card:hover .culto-day-badge,
+  .culto-card:hover .culto-name,
+  .culto-card:hover .culto-time,
+  .culto-card:hover .culto-desc {
+    color: var(--clr-white);
+  }
 }
+
+@media (hover: hover) and (pointer: fine) and (min-width: 768px) {
+  .culto-card:hover .culto-day-badge {
+    background: rgba(255, 255, 255, 0.15);
+  }
+}
+
+@media (hover: hover) and (pointer: fine) and (min-width: 768px) {
+  .culto-card:hover .culto-icon {
+    color: var(--clr-white);
+  }
 }
 
 .culto-card--featured {
@@ -1505,10 +1513,10 @@ select {
 }
 
 @media (hover: hover) and (pointer: fine) and (min-width: 768px) {
-.culto-card--featured:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 20px 48px hsla(250, 60%, 40%, 0.4);
-}
+  .culto-card--featured:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 48px hsla(250, 60%, 40%, 0.4);
+  }
 }
 
 /* Relative positioning for card content */
@@ -1635,10 +1643,10 @@ select {
 }
 
 @media (hover: hover) and (pointer: fine) and (min-width: 768px) {
-#youtube-link-btn:hover {
-  background: hsl(0, 84%, 38%);
-  box-shadow: 0 12px 40px hsla(0, 84%, 48%, 0.35);
-}
+  #youtube-link-btn:hover {
+    background: hsl(0, 84%, 38%);
+    box-shadow: 0 12px 40px hsla(0, 84%, 48%, 0.35);
+  }
 }
 
 .live-dot {
@@ -1859,11 +1867,11 @@ select {
 }
 
 @media (hover: hover) and (pointer: fine) and (min-width: 768px) {
-.oferta-card:hover {
-  border-color: var(--clr-blue-300);
-  box-shadow: 0 8px 32px hsla(200, 90%, 50%, 0.2);
-  transform: translateY(-4px);
-}
+  .oferta-card:hover {
+    border-color: var(--clr-blue-300);
+    box-shadow: 0 8px 32px hsla(200, 90%, 50%, 0.2);
+    transform: translateY(-4px);
+  }
 }
 
 .oferta-card--featured {
@@ -1935,10 +1943,10 @@ select {
 }
 
 @media (hover: hover) and (pointer: fine) and (min-width: 768px) {
-.copy-btn:hover {
-  background: var(--clr-blue-100);
-  color: var(--clr-blue-500);
-}
+  .copy-btn:hover {
+    background: var(--clr-blue-100);
+    color: var(--clr-blue-500);
+  }
 }
 
 .copy-btn.copied {
@@ -2037,10 +2045,10 @@ select {
 }
 
 @media (hover: hover) and (pointer: fine) and (min-width: 768px) {
-.location-detail a:hover {
-  color: var(--clr-purple-700);
-  text-decoration: underline;
-}
+  .location-detail a:hover {
+    color: var(--clr-purple-700);
+    text-decoration: underline;
+  }
 }
 
 .location-info .btn {
@@ -2132,19 +2140,19 @@ select {
 }
 
 @media (hover: hover) and (pointer: fine) and (min-width: 768px) {
-.social-link:hover {
-  background: var(--clr-blue-500);
-  border-color: var(--clr-blue-500);
-  color: var(--clr-white);
-  transform: translateY(-2px);
-}
+  .social-link:hover {
+    background: var(--clr-blue-500);
+    border-color: var(--clr-blue-500);
+    color: var(--clr-white);
+    transform: translateY(-2px);
+  }
 }
 
 @media (hover: hover) and (pointer: fine) and (min-width: 768px) {
-.social-link--whatsapp:hover {
-  background: hsl(142, 70%, 40%);
-  border-color: hsl(142, 70%, 40%);
-}
+  .social-link--whatsapp:hover {
+    background: hsl(142, 70%, 40%);
+    border-color: hsl(142, 70%, 40%);
+  }
 }
 
 #social-linktree img {
@@ -2173,9 +2181,9 @@ select {
 }
 
 @media (hover: hover) and (pointer: fine) and (min-width: 768px) {
-.footer-nav a:hover {
-  color: var(--clr-yellow-400);
-}
+  .footer-nav a:hover {
+    color: var(--clr-yellow-400);
+  }
 }
 
 .footer-contact p {
@@ -2186,9 +2194,9 @@ select {
 }
 
 @media (hover: hover) and (pointer: fine) and (min-width: 768px) {
-.footer-contact a:hover {
-  color: var(--clr-yellow-400);
-}
+  .footer-contact a:hover {
+    color: var(--clr-yellow-400);
+  }
 }
 
 .footer-bank {
@@ -2273,10 +2281,10 @@ select {
 }
 
 @media (hover: hover) and (pointer: fine) and (min-width: 768px) {
-.whatsapp-float:hover {
-  transform: scale(1.1) translateY(-2px);
-  box-shadow: 0 8px 32px hsla(142, 70%, 40%, 0.6);
-}
+  .whatsapp-float:hover {
+    transform: scale(1.1) translateY(-2px);
+    box-shadow: 0 8px 32px hsla(142, 70%, 40%, 0.6);
+  }
 }
 
 .whatsapp-tooltip {
@@ -2307,10 +2315,10 @@ select {
 }
 
 @media (hover: hover) and (pointer: fine) and (min-width: 768px) {
-.whatsapp-float:hover .whatsapp-tooltip {
-  opacity: 1;
-  transform: translateX(0);
-}
+  .whatsapp-float:hover .whatsapp-tooltip {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 /* =====================================================
@@ -2330,16 +2338,28 @@ select {
     opacity: 0;
     transform: translate3d(0, 28px, 0);
   }
+
   to {
     opacity: 1;
     transform: translate3d(0, 0, 0);
   }
 }
 
-[data-reveal-delay="1"].revealed { animation-delay: 120ms; }
-[data-reveal-delay="2"].revealed { animation-delay: 240ms; }
-[data-reveal-delay="3"].revealed { animation-delay: 360ms; }
-[data-reveal-delay="4"].revealed { animation-delay: 480ms; }
+[data-reveal-delay="1"].revealed {
+  animation-delay: 120ms;
+}
+
+[data-reveal-delay="2"].revealed {
+  animation-delay: 240ms;
+}
+
+[data-reveal-delay="3"].revealed {
+  animation-delay: 360ms;
+}
+
+[data-reveal-delay="4"].revealed {
+  animation-delay: 480ms;
+}
 
 /* =====================================================
    MISC
@@ -2461,12 +2481,12 @@ select {
 }
 
 @media (hover: hover) and (pointer: fine) and (min-width: 768px) {
-.events-carousel .carousel-btn:hover {
-  background: var(--clr-blue-500);
-  color: var(--clr-white);
-  box-shadow: 0 8px 24px hsla(200, 90%, 50%, 0.3);
-  border-color: transparent;
-}
+  .events-carousel .carousel-btn:hover {
+    background: var(--clr-blue-500);
+    color: var(--clr-white);
+    box-shadow: 0 8px 24px hsla(200, 90%, 50%, 0.3);
+    border-color: transparent;
+  }
 }
 
 .events-carousel .carousel-btn--prev {
@@ -2616,10 +2636,10 @@ select {
 }
 
 @media (hover: hover) and (pointer: fine) and (min-width: 768px) {
-.event-instagram-btn:hover {
-  background: rgba(255, 255, 255, 0.2);
-  border-color: rgba(255, 255, 255, 0.4);
-}
+  .event-instagram-btn:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.4);
+  }
 }
 
 .event-image {
@@ -2646,16 +2666,16 @@ select {
 }
 
 @media (hover: hover) and (pointer: fine) and (min-width: 768px) {
-.event-card:hover .event-img {
-  transform: scale(1.05);
-}
+  .event-card:hover .event-img {
+    transform: scale(1.05);
+  }
 }
 
 @media (hover: hover) and (pointer: fine) and (min-width: 768px) {
-.event-instagram-btn:hover {
-  background: var(--clr-blue-500);
-  border-color: var(--clr-blue-500);
-}
+  .event-instagram-btn:hover {
+    background: var(--clr-blue-500);
+    border-color: var(--clr-blue-500);
+  }
 }
 
 /* =====================================================
@@ -2778,9 +2798,9 @@ select {
 }
 
 @media (hover: hover) and (pointer: fine) and (min-width: 768px) {
-.baptism-gallery:hover {
-  transform: translateY(-4px);
-}
+  .baptism-gallery:hover {
+    transform: translateY(-4px);
+  }
 }
 
 .baptism-main-img {
@@ -2822,10 +2842,10 @@ select {
 }
 
 @media (hover: hover) and (pointer: fine) and (min-width: 768px) {
-.baptism-content .btn-primary:hover {
-  background: var(--clr-blue-500);
-  box-shadow: 0 8px 24px hsla(200, 90%, 50%, 0.3);
-}
+  .baptism-content .btn-primary:hover {
+    background: var(--clr-blue-500);
+    box-shadow: 0 8px 24px hsla(200, 90%, 50%, 0.3);
+  }
 }
 
 /* =====================================================
@@ -2940,9 +2960,9 @@ select {
 }
 
 @media (hover: hover) and (pointer: fine) and (min-width: 768px) {
-::-webkit-scrollbar-thumb:hover {
-  background: var(--clr-purple-300, hsl(263, 50%, 72%));
-}
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--clr-purple-300, hsl(263, 50%, 72%));
+  }
 }
 
 /* Print */
@@ -3011,13 +3031,28 @@ select {
 }
 
 /* Events (branco) → Anniversary → About (branco) */
-.anniversary { --wave-top: var(--clr-white); --wave-bottom: var(--clr-white); }
+.anniversary {
+  --wave-top: var(--clr-white);
+  --wave-bottom: var(--clr-white);
+}
+
 /* Ministérios (offwhite) → Pastors → Cultos (branco) */
-.pastors { --wave-top: var(--clr-offwhite); --wave-bottom: var(--clr-white); }
+.pastors {
+  --wave-top: var(--clr-offwhite);
+  --wave-bottom: var(--clr-white);
+}
+
 /* Batismo (offwhite) → Prayer → Oferta (topo do gradiente = purple-100) */
-.prayer { --wave-top: var(--clr-offwhite); --wave-bottom: var(--clr-purple-100); }
+.prayer {
+  --wave-top: var(--clr-offwhite);
+  --wave-bottom: var(--clr-purple-100);
+}
+
 /* Oferta (fim do gradiente = offwhite) → MyKids → Localização (branco) */
-.mykids { --wave-top: var(--clr-offwhite); --wave-bottom: var(--clr-white); }
+.mykids {
+  --wave-top: var(--clr-offwhite);
+  --wave-bottom: var(--clr-white);
+}
 
 /* =====================================================
    RESPONSIVIDADE (ajustes gerais)
@@ -3027,9 +3062,17 @@ select {
   --wave-h: clamp(36px, 5vw, 60px);
 }
 
-html { -webkit-tap-highlight-color: transparent; }
-body { overflow-wrap: break-word; }
-iframe { max-width: 100%; }
+html {
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  overflow-wrap: break-word;
+}
+
+iframe {
+  max-width: 100%;
+}
 
 /* Seções com onda: padding sempre maior que a altura da onda */
 .pastors,
@@ -3037,19 +3080,37 @@ iframe { max-width: 100%; }
 .anniversary {
   padding: calc(var(--wave-h) + var(--space-8)) 0;
 }
+
 .mykids {
   padding: calc(var(--wave-h) + var(--space-8)) 0;
 }
 
 /* Navbar: cabe até 1280px, e dá mais espaço em telas grandes */
-.nav-container { max-width: 1360px; }
-@media (max-width: 1279px) {
-  .nav-toggle { width: 44px; height: 44px; align-items: center; justify-content: center; }
-  .nav-link.active { color: var(--clr-purple-700); }
-  .nav-menu { padding-bottom: calc(var(--space-6) + env(safe-area-inset-bottom, 0px)); }
+.nav-container {
+  max-width: 1360px;
 }
+
+@media (max-width: 1279px) {
+  .nav-toggle {
+    width: 44px;
+    height: 44px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .nav-link.active {
+    color: var(--clr-purple-700);
+  }
+
+  .nav-menu {
+    padding-bottom: calc(var(--space-6) + env(safe-area-inset-bottom, 0px));
+  }
+}
+
 @media (min-width: 1280px) and (max-width: 1439px) {
-  .nav-link { padding: var(--space-2) var(--space-2); }
+  .nav-link {
+    padding: var(--space-2) var(--space-2);
+  }
 }
 
 /* Pastores: 3º card não fica sozinho no tablet */
@@ -3063,7 +3124,10 @@ iframe { max-width: 100%; }
 }
 
 /* Cultos */
-.culto-time { font-size: clamp(1.5rem, 2.6vw, var(--text-3xl)); }
+.culto-time {
+  font-size: clamp(1.5rem, 2.6vw, var(--text-3xl));
+}
+
 @media (min-width: 480px) and (max-width: 899px) {
   .cultos-grid .culto-card:last-child:nth-child(odd) {
     grid-column: 1 / -1;
@@ -3082,14 +3146,29 @@ iframe { max-width: 100%; }
     width: 100%;
   }
 }
-.oferta-key code { overflow-wrap: anywhere; }
-.bank-row { gap: var(--space-3); }
+
+.oferta-key code {
+  overflow-wrap: anywhere;
+}
+
+.bank-row {
+  gap: var(--space-3);
+}
 
 /* Eventos */
-.event-meta { flex-wrap: wrap; }
+.event-meta {
+  flex-wrap: wrap;
+}
+
 @media (max-width: 767px) {
-  .event-info { padding: var(--space-6) var(--space-5); }
-  .events-carousel { padding-bottom: 3.5rem; }
+  .event-info {
+    padding: var(--space-6) var(--space-5);
+  }
+
+  .events-carousel {
+    padding-bottom: 3.5rem;
+  }
+
   .events-carousel .carousel-btn {
     top: auto;
     bottom: 0;
@@ -3097,8 +3176,17 @@ iframe { max-width: 100%; }
     width: 40px;
     height: 40px;
   }
-  .events-carousel .carousel-btn--prev { left: calc(50% - 110px); right: auto; }
-  .events-carousel .carousel-btn--next { right: calc(50% - 110px); left: auto; }
+
+  .events-carousel .carousel-btn--prev {
+    left: calc(50% - 110px);
+    right: auto;
+  }
+
+  .events-carousel .carousel-btn--next {
+    right: calc(50% - 110px);
+    left: auto;
+  }
+
   .events .carousel-dots {
     margin-top: -2.5rem;
     height: 40px;
@@ -3109,39 +3197,76 @@ iframe { max-width: 100%; }
 
 /* Ministérios: no celular navega por swipe e pelos pontos (setas cobriam o texto) */
 @media (max-width: 767px) {
-  .carousel-wrapper > .carousel-btn { display: none; }
-  .carousel-wrapper { padding: 0 var(--space-4); }
+  .carousel-wrapper>.carousel-btn {
+    display: none;
+  }
+
+  .carousel-wrapper {
+    padding: 0 var(--space-4);
+  }
 }
 
 /* MyKids */
-.mykids-features { max-width: 100%; }
-.mykids-features .feature-item { min-width: 0; white-space: normal; }
-@media (min-width: 640px) {
-  .mykids-features { max-width: 640px; }
+.mykids-features {
+  max-width: 100%;
 }
-.mykids-cta { flex-wrap: wrap; }
+
+.mykids-features .feature-item {
+  min-width: 0;
+  white-space: normal;
+}
+
+@media (min-width: 640px) {
+  .mykids-features {
+    max-width: 640px;
+  }
+}
+
+.mykids-cta {
+  flex-wrap: wrap;
+}
 
 /* Sobre: selo de ano não vaza da tela */
 @media (max-width: 899px) {
-  .about-visual { padding-bottom: 0; }
+  .about-visual {
+    padding-bottom: 0;
+  }
 }
 
 /* Localização */
 @media (max-width: 899px) {
-  .map-wrap iframe { min-height: 320px; height: 320px; }
+  .map-wrap iframe {
+    min-height: 320px;
+    height: 320px;
+  }
 }
 
 /* Rodapé */
 @media (min-width: 1024px) {
-  .footer-grid { grid-template-columns: 2fr 1fr 1fr; }
+  .footer-grid {
+    grid-template-columns: 2fr 1fr 1fr;
+  }
 }
+
 @media (min-width: 640px) and (max-width: 1023px) {
-  .footer-brand { grid-column: 1 / -1; }
+  .footer-brand {
+    grid-column: 1 / -1;
+  }
 }
+
 @media (max-width: 639px) {
-  .footer-top { padding: var(--space-12) 0 var(--space-8); }
-  .footer-grid { gap: var(--space-8); }
-  .footer-bottom .container { flex-direction: column; text-align: center; }
+  .footer-top {
+    padding: var(--space-12) 0 var(--space-8);
+  }
+
+  .footer-grid {
+    gap: var(--space-8);
+  }
+
+  .footer-bottom .container {
+    flex-direction: column;
+    text-align: center;
+  }
 }
 
 /* WhatsApp flutuante */
@@ -3156,32 +3281,82 @@ iframe { max-width: 100%; }
 
 /* Celulares pequenos */
 @media (max-width: 767px) {
-  :root { --section-pad: var(--space-12) 0; }
-  .hero-subtitle { font-size: var(--text-base); }
-  .hero-actions { margin-bottom: var(--space-10); }
-  .about-closing { padding: var(--space-4); }
-  .cultos-youtube { padding: var(--space-6) var(--space-4); }
-  .pastor-info { padding: var(--space-5); }
-  .prayer-form-wrap { border-radius: var(--radius-lg); }
+  :root {
+    --section-pad: var(--space-12) 0;
+  }
+
+  .hero-subtitle {
+    font-size: var(--text-base);
+  }
+
+  .hero-actions {
+    margin-bottom: var(--space-10);
+  }
+
+  .about-closing {
+    padding: var(--space-4);
+  }
+
+  .cultos-youtube {
+    padding: var(--space-6) var(--space-4);
+  }
+
+  .pastor-info {
+    padding: var(--space-5);
+  }
+
+  .prayer-form-wrap {
+    border-radius: var(--radius-lg);
+  }
 }
+
 @media (max-width: 480px) {
-  .btn { white-space: normal; text-align: center; justify-content: center; }
+  .btn {
+    white-space: normal;
+    text-align: center;
+    justify-content: center;
+  }
+
   .hero-actions .btn,
   .cultos-youtube .btn,
-  .mykids-cta .btn { width: 100%; justify-content: center; }
-  .about-stat-card { padding: var(--space-3) var(--space-4); }
-  .stat-number { font-size: var(--text-2xl); }
-  .oferta-card { padding: var(--space-6) var(--space-4); }
-  .bank-row { flex-wrap: wrap; }
-  .baptism-quote { padding: var(--space-4); }
+  .mykids-cta .btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .about-stat-card {
+    padding: var(--space-3) var(--space-4);
+  }
+
+  .stat-number {
+    font-size: var(--text-2xl);
+  }
+
+  .oferta-card {
+    padding: var(--space-6) var(--space-4);
+  }
+
+  .bank-row {
+    flex-wrap: wrap;
+  }
+
+  .baptism-quote {
+    padding: var(--space-4);
+  }
 }
+
 @media (max-width: 359px) {
-  .section-title { font-size: 1.65rem; }
+  .section-title {
+    font-size: 1.65rem;
+  }
 }
 
 /* Respeita quem prefere menos movimento */
 @media (prefers-reduced-motion: reduce) {
-  *, *::before, *::after {
+
+  *,
+  *::before,
+  *::after {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
@@ -3197,14 +3372,22 @@ iframe { max-width: 100%; }
   flex-direction: column;
   gap: var(--space-6);
 }
-.about-heading .section-title { margin-bottom: 0; }
+
+.about-heading .section-title {
+  margin-bottom: 0;
+}
+
 .about-figure {
   position: relative;
   flex: 1;
   display: flex;
   flex-direction: column;
 }
-.about-img-wrap { position: relative; }
+
+.about-img-wrap {
+  position: relative;
+}
+
 .about-img {
   position: absolute;
   inset: 0;
@@ -3212,9 +3395,16 @@ iframe { max-width: 100%; }
   height: 100%;
   object-fit: cover;
 }
-.about-content { max-width: none; }
+
+.about-content {
+  max-width: none;
+}
+
 @media (min-width: 900px) {
-  .about-grid { align-items: stretch; }
+  .about-grid {
+    align-items: stretch;
+  }
+
   .about-img-wrap {
     flex: 1;
     aspect-ratio: auto;
@@ -3223,9 +3413,18 @@ iframe { max-width: 100%; }
 }
 
 /* Rodapé: lista de links mais compacta */
-.footer-nav ul { gap: 0.25rem; }
-.footer-nav li { line-height: 1.4; }
-.footer-nav a { display: inline-block; padding: 0.125rem 0; }
+.footer-nav ul {
+  gap: 0.25rem;
+}
+
+.footer-nav li {
+  line-height: 1.4;
+}
+
+.footer-nav a {
+  display: inline-block;
+  padding: 0.125rem 0;
+}
 
 /* =====================================================
    TEMA AZUL (identidade visual: roxo + amarelo + AZUL)
@@ -3239,8 +3438,13 @@ iframe { max-width: 100%; }
 }
 
 /* Eyebrows e títulos */
-.section-eyebrow { color: var(--clr-blue-500); }
-.section-eyebrow--light { color: var(--clr-yellow-400); }
+.section-eyebrow {
+  color: var(--clr-blue-500);
+}
+
+.section-eyebrow--light {
+  color: var(--clr-yellow-400);
+}
 
 .section-title strong {
   background: linear-gradient(90deg, var(--clr-purple-700), var(--clr-blue-500));
@@ -3251,6 +3455,7 @@ iframe { max-width: 100%; }
   -webkit-box-decoration-break: clone;
   box-decoration-break: clone;
 }
+
 .section-title--light strong {
   background: none;
   -webkit-text-fill-color: currentColor;
@@ -3267,6 +3472,7 @@ iframe { max-width: 100%; }
   border-radius: 4px;
   background: linear-gradient(90deg, var(--clr-blue-500), var(--clr-blue-300));
 }
+
 .section-title--light::after {
   background: linear-gradient(90deg, var(--clr-yellow-400), var(--clr-blue-300)) !important;
 }
@@ -3275,12 +3481,21 @@ iframe { max-width: 100%; }
 .navbar.scrolled {
   box-shadow: 0 2px 16px hsla(207, 100%, 25%, 0.12);
 }
-.navbar.scrolled .nav-link.active { color: var(--clr-blue-500); }
-@media (hover: hover) and (pointer: fine) and (min-width: 768px) {
-.navbar.scrolled .nav-link:hover { color: var(--clr-blue-500); }
+
+.navbar.scrolled .nav-link.active {
+  color: var(--clr-blue-500);
 }
+
+@media (hover: hover) and (pointer: fine) and (min-width: 768px) {
+  .navbar.scrolled .nav-link:hover {
+    color: var(--clr-blue-500);
+  }
+}
+
 @media (max-width: 1279px) {
-  .nav-link.active { color: var(--clr-blue-500); }
+  .nav-link.active {
+    color: var(--clr-blue-500);
+  }
 }
 
 /* Hero */
@@ -3295,9 +3510,16 @@ iframe { max-width: 100%; }
 .event-content {
   background: linear-gradient(135deg, var(--clr-blue-600) 0%, var(--clr-purple-800) 100%);
 }
+
 .carousel-btn,
-.events-carousel .carousel-btn { color: var(--clr-blue-500); border-color: var(--clr-blue-100); }
-.carousel-dot.active { background: var(--clr-blue-500); }
+.events-carousel .carousel-btn {
+  color: var(--clr-blue-500);
+  border-color: var(--clr-blue-100);
+}
+
+.carousel-dot.active {
+  background: var(--clr-blue-500);
+}
 
 /* Aniversário e MyKids (fundos roxos ganham brilho azul) */
 .anniversary {
@@ -3305,16 +3527,19 @@ iframe { max-width: 100%; }
     radial-gradient(ellipse at 85% 20%, hsla(207, 100%, 50%, 0.28) 0%, transparent 50%),
     linear-gradient(135deg, var(--clr-purple-700) 0%, var(--clr-purple-900) 100%);
 }
+
 .mykids {
   background:
     radial-gradient(ellipse at 88% 15%, hsla(207, 100%, 50%, 0.28) 0%, transparent 50%),
     linear-gradient(135deg, var(--clr-purple-900) 0%, var(--clr-purple-800) 100%);
 }
+
 .anniversary .btn-primary,
 .mykids .btn-primary {
   background: linear-gradient(135deg, var(--clr-blue-500), var(--clr-blue-300));
   box-shadow: 0 8px 24px hsla(207, 100%, 40%, 0.35);
 }
+
 .mykids-features .feature-item {
   background: hsla(207, 100%, 60%, 0.1);
   border: 1px solid hsla(207, 100%, 75%, 0.35);
@@ -3325,10 +3550,12 @@ iframe { max-width: 100%; }
   background: linear-gradient(135deg, var(--clr-blue-500), var(--clr-blue-400));
   box-shadow: 0 8px 28px hsla(207, 100%, 33%, 0.35);
 }
+
 .about-closing {
   border-left-color: var(--clr-blue-500);
   background: var(--clr-blue-50);
 }
+
 .about-img-wrap {
   box-shadow: var(--shadow-lg), 0 0 0 6px var(--clr-blue-100);
 }
@@ -3340,17 +3567,23 @@ iframe { max-width: 100%; }
     radial-gradient(ellipse at 80% 20%, hsla(46, 90%, 61%, 0.1) 0%, transparent 50%),
     radial-gradient(ellipse at 90% 90%, hsla(207, 100%, 50%, 0.25) 0%, transparent 55%);
 }
-.pastor-card { border-top: 3px solid var(--clr-blue-300); }
+
+.pastor-card {
+  border-top: 3px solid var(--clr-blue-300);
+}
+
 .prayer-bg::after {
   background-image:
     radial-gradient(circle at 70% 30%, hsla(46, 90%, 61%, 0.08) 0%, transparent 50%),
     radial-gradient(circle at 10% 80%, hsla(263, 80%, 70%, 0.12) 0%, transparent 40%),
     radial-gradient(circle at 95% 95%, hsla(207, 100%, 50%, 0.25) 0%, transparent 45%);
 }
+
 .prayer-form .btn-primary {
   background: linear-gradient(135deg, var(--clr-blue-500), var(--clr-blue-400));
   box-shadow: 0 8px 24px hsla(207, 100%, 40%, 0.3);
 }
+
 .form-group input:focus,
 .form-group textarea:focus {
   border-color: var(--clr-blue-400);
@@ -3358,29 +3591,61 @@ iframe { max-width: 100%; }
 }
 
 /* Cultos */
-.culto-card { background: var(--clr-blue-50); border-color: var(--clr-blue-100); }
-.culto-day-badge { background: var(--clr-blue-100); color: var(--clr-blue-500); }
-.culto-icon { color: var(--clr-blue-500); }
-.cultos-youtube { background: var(--clr-blue-50); border-color: var(--clr-blue-300); }
+.culto-card {
+  background: var(--clr-blue-50);
+  border-color: var(--clr-blue-100);
+}
+
+.culto-day-badge {
+  background: var(--clr-blue-100);
+  color: var(--clr-blue-500);
+}
+
+.culto-icon {
+  color: var(--clr-blue-500);
+}
+
+.cultos-youtube {
+  background: var(--clr-blue-50);
+  border-color: var(--clr-blue-300);
+}
 
 /* Batismo */
-.rule-icon { background: var(--clr-blue-100); color: var(--clr-blue-500); }
+.rule-icon {
+  background: var(--clr-blue-100);
+  color: var(--clr-blue-500);
+}
+
 .baptism-gallery {
   border: 3px solid var(--clr-blue-100);
   box-shadow: 0 12px 36px hsla(207, 100%, 33%, 0.18);
 }
-.baptism-quote cite { color: var(--clr-blue-500); }
+
+.baptism-quote cite {
+  color: var(--clr-blue-500);
+}
 
 /* Localização */
-.location-icon { background: var(--clr-blue-100); color: var(--clr-blue-500); }
-.location-detail a { color: var(--clr-blue-500); font-weight: 600; }
+.location-icon {
+  background: var(--clr-blue-100);
+  color: var(--clr-blue-500);
+}
+
+.location-detail a {
+  color: var(--clr-blue-500);
+  font-weight: 600;
+}
+
 .map-wrap {
   border: 1px solid var(--clr-blue-100);
   box-shadow: 0 14px 40px hsla(207, 100%, 33%, 0.16);
 }
 
 /* Rodapé */
-.footer { border-top: none; }
+.footer {
+  border-top: none;
+}
+
 .footer-nav-title::after {
   content: '';
   display: block;
@@ -3397,85 +3662,155 @@ iframe { max-width: 100%; }
   border: 1px solid hsla(207, 100%, 80%, 0.35);
   box-shadow: 0 14px 36px hsla(210, 100%, 25%, 0.28);
 }
+
 .oferta-card.oferta-card--featured {
   background: linear-gradient(160deg, var(--clr-purple-600) 0%, var(--clr-purple-800) 55%, var(--clr-purple-900) 100%);
   border-color: var(--clr-yellow-400);
   box-shadow: 0 0 0 3px hsla(46, 92%, 70%, 0.25), 0 16px 40px hsla(263, 70%, 22%, 0.4);
 }
-.oferta-card h3 { color: var(--clr-white); }
-.oferta-card > p { color: rgba(255, 255, 255, 0.88); }
-.oferta-detail { color: rgba(255, 255, 255, 0.72); }
-.oferta-card:not(.oferta-card--featured) .oferta-icon rect { fill: rgba(255, 255, 255, 0.16); }
+
+.oferta-card h3 {
+  color: var(--clr-white);
+}
+
+.oferta-card>p {
+  color: rgba(255, 255, 255, 0.88);
+}
+
+.oferta-detail {
+  color: rgba(255, 255, 255, 0.72);
+}
+
+.oferta-card:not(.oferta-card--featured) .oferta-icon rect {
+  fill: rgba(255, 255, 255, 0.16);
+}
+
 .oferta-key {
   background: rgba(255, 255, 255, 0.12);
   border-color: rgba(255, 255, 255, 0.28);
 }
-.oferta-key code { color: var(--clr-white); }
+
+.oferta-key code {
+  color: var(--clr-white);
+}
+
 .copy-btn {
   background: var(--clr-white);
   color: var(--clr-blue-500);
   border-color: transparent;
 }
+
 @media (hover: hover) and (pointer: fine) and (min-width: 768px) {
-.copy-btn:hover { background: var(--clr-yellow-400); color: var(--clr-purple-900); }
+  .copy-btn:hover {
+    background: var(--clr-yellow-400);
+    color: var(--clr-purple-900);
+  }
 }
+
 .bank-details {
   background: rgba(255, 255, 255, 0.1);
   border-color: rgba(255, 255, 255, 0.25);
 }
-.bank-row { color: rgba(255, 255, 255, 0.85); }
-.bank-row:not(:last-child) { border-bottom-color: rgba(255, 255, 255, 0.2); }
-.bank-row strong { color: var(--clr-white); }
+
+.bank-row {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.bank-row:not(:last-child) {
+  border-bottom-color: rgba(255, 255, 255, 0.2);
+}
+
+.bank-row strong {
+  color: var(--clr-white);
+}
+
 @media (hover: hover) and (pointer: fine) and (min-width: 768px) {
-.oferta-card:hover {
-  border-color: var(--clr-blue-200);
-  box-shadow: var(--shadow-lg);
+  .oferta-card:hover {
+    border-color: var(--clr-blue-200);
+    box-shadow: var(--shadow-lg);
+  }
 }
-}
+
 @media (hover: hover) and (pointer: fine) and (min-width: 768px) {
-.oferta-card.oferta-card--featured:hover {
-  border-color: var(--clr-yellow-400);
-  box-shadow: 0 0 0 3px hsla(46, 92%, 70%, 0.35), 0 22px 48px hsla(263, 70%, 22%, 0.5);
-}
+  .oferta-card.oferta-card--featured:hover {
+    border-color: var(--clr-yellow-400);
+    box-shadow: 0 0 0 3px hsla(46, 92%, 70%, 0.35), 0 22px 48px hsla(263, 70%, 22%, 0.5);
+  }
 }
 
 /* Scroll suave (Lenis) */
-html.lenis, html.lenis body { height: auto; }
-html.lenis { scroll-behavior: auto !important; }
-.lenis.lenis-stopped { overflow: clip; }
-.lenis [data-lenis-prevent] { overscroll-behavior: contain; }
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+html.lenis {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-stopped {
+  overflow: clip;
+}
+
+.lenis [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
 
 /* =====================================================
    TIPOGRAFIA: somente Montserrat (família do convite/identidade)
    ===================================================== */
-body { font-weight: 400; line-height: 1.65; }
+body {
+  font-weight: 400;
+  line-height: 1.65;
+}
+
 .hero-title {
   font-size: clamp(1.9rem, 4.6vw, 4rem);
   font-weight: 800;
   letter-spacing: -0.02em;
   line-height: 1.12;
 }
+
 .section-title {
   font-size: clamp(1.7rem, 3.6vw, 2.75rem);
   font-weight: 800;
   letter-spacing: -0.015em;
   line-height: 1.2;
 }
+
 .pastor-name,
 .min-title,
 .event-title,
 .oferta-card h3,
 .culto-name,
-.instituto-card h3 { font-weight: 700; letter-spacing: -0.01em; }
-.culto-time { font-size: clamp(1.4rem, 2.4vw, 1.75rem); }
-.stat-number { font-weight: 800; }
-.baptism-quote p { font-weight: 500; }
+.instituto-card h3 {
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+.culto-time {
+  font-size: clamp(1.4rem, 2.4vw, 1.75rem);
+}
+
+.stat-number {
+  font-weight: 800;
+}
+
+.baptism-quote p {
+  font-weight: 500;
+}
+
 .section-eyebrow,
 .hero-badge,
-.culto-day-badge { letter-spacing: 0.14em; }
+.culto-day-badge {
+  letter-spacing: 0.14em;
+}
 
 /* Card de evento: imagem sobre o mesmo fundo do card */
-.event-image { padding: var(--space-4); }
+.event-image {
+  padding: var(--space-4);
+}
+
 .event-img {
   padding: 0;
   border-radius: var(--radius-lg);
@@ -3486,18 +3821,33 @@ body { font-weight: 400; line-height: 1.65; }
   border-radius: var(--radius-xl);
   box-shadow: 0 12px 32px hsla(210, 100%, 25%, 0.22);
 }
+
 .event-img {
   border-radius: calc(var(--radius-xl) - var(--space-4));
 }
+
 @media (max-width: 767px) {
-  .event-content { border-radius: var(--radius-lg); }
-  .event-img { border-radius: calc(var(--radius-lg) - var(--space-4) + 0.5rem); }
+  .event-content {
+    border-radius: var(--radius-lg);
+  }
+
+  .event-img {
+    border-radius: calc(var(--radius-lg) - var(--space-4) + 0.5rem);
+  }
 }
 
 /* Evento: sem zoom na imagem e sem sombra vazando nos cantos */
-.event-card:hover .event-img { transform: none; }
-.event-img { transition: none; }
-.event-content { box-shadow: none; }
+.event-card:hover .event-img {
+  transform: none;
+}
+
+.event-img {
+  transition: none;
+}
+
+.event-content {
+  box-shadow: none;
+}
 
 /* Culto em destaque (2º): mantém fundo escuro para o texto branco aparecer */
 .culto-card.culto-card--featured {
@@ -3511,10 +3861,12 @@ body { font-weight: 400; line-height: 1.65; }
 .culto-card::before {
   background: linear-gradient(135deg, var(--clr-blue-400) 0%, var(--clr-blue-600) 100%);
 }
+
 .culto-card.culto-card--featured {
   background: linear-gradient(135deg, var(--clr-purple-700) 0%, var(--clr-purple-600) 100%);
   box-shadow: var(--shadow-purple);
 }
+
 @media (hover: hover) and (pointer: fine) and (min-width: 768px) {
   .culto-card.culto-card--featured:hover {
     box-shadow: 0 20px 48px hsla(263, 62%, 46%, 0.4);
@@ -3529,21 +3881,37 @@ body { font-weight: 400; line-height: 1.65; }
   background: linear-gradient(90deg, var(--clr-blue-500) 0%, var(--clr-purple-700) 100%);
   box-shadow: 0 12px 32px hsla(250, 60%, 40%, 0.3);
 }
+
 .culto-card:nth-child(1)::before {
   background: linear-gradient(90deg, var(--clr-blue-400) 0%, var(--clr-blue-500) 100%);
 }
+
 .culto-card:nth-child(3)::before {
   background: linear-gradient(90deg, var(--clr-purple-700) 0%, var(--clr-purple-800) 100%);
 }
+
 @media (hover: hover) and (pointer: fine) and (min-width: 768px) {
-  .culto-card:nth-child(1):hover { box-shadow: var(--shadow-lg); }
-  .culto-card:nth-child(3):hover { box-shadow: 0 12px 32px hsla(263, 62%, 36%, 0.4); }
-  .culto-card.culto-card--featured:hover { box-shadow: 0 20px 48px hsla(250, 60%, 40%, 0.4); }
+  .culto-card:nth-child(1):hover {
+    box-shadow: var(--shadow-lg);
+  }
+
+  .culto-card:nth-child(3):hover {
+    box-shadow: 0 12px 32px hsla(263, 62%, 36%, 0.4);
+  }
+
+  .culto-card.culto-card--featured:hover {
+    box-shadow: 0 20px 48px hsla(250, 60%, 40%, 0.4);
+  }
 }
 
 /* Versículos dos cards de ministério: detalhes em azul (claro o bastante para o fundo escuro) */
-.min-verse { border-left-color: hsl(207, 100%, 62%); }
-.min-verse cite { color: hsl(207, 100%, 72%); }
+.min-verse {
+  border-left-color: hsl(207, 100%, 62%);
+}
+
+.min-verse cite {
+  color: hsl(207, 100%, 72%);
+}
 
 /* =====================================================
    AJUSTES MOBILE (rodapé, swipe do carrossel, menu)
@@ -3555,15 +3923,35 @@ body { font-weight: 400; line-height: 1.65; }
     grid-template-columns: 1fr 1fr;
     gap: var(--space-8) var(--space-4);
   }
-  .footer-brand { grid-column: 1 / -1; }
-  .footer-nav a { font-size: 0.8125rem; }
+
+  .footer-brand {
+    grid-column: 1 / -1;
+  }
+
+  .footer-nav a {
+    font-size: 0.8125rem;
+  }
 }
 
 /* Carrossel de ministérios: swipe horizontal acompanhando o dedo */
-.carousel-track-wrap { touch-action: pan-y; }
-.carousel-track { user-select: none; -webkit-user-select: none; }
-.carousel-track.dragging { transition: none; cursor: grabbing; }
-.carousel-track img { -webkit-user-drag: none; pointer-events: none; }
+.carousel-track-wrap {
+  touch-action: pan-y;
+}
+
+.carousel-track {
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.carousel-track.dragging {
+  transition: none;
+  cursor: grabbing;
+}
+
+.carousel-track img {
+  -webkit-user-drag: none;
+  pointer-events: none;
+}
 
 /* Menu mobile: cartão roxo no canto superior direito */
 @media (max-width: 1279px) {
@@ -3588,10 +3976,18 @@ body { font-weight: 400; line-height: 1.65; }
     transform-origin: top right;
     transform: scale(0.95) translateY(-8px);
   }
-  .navbar .nav-menu.open { transform: scale(1) translateY(0); }
 
-  .navbar .nav-menu .nav-list { gap: 2px; }
-  .navbar .nav-menu .nav-list > li { flex-shrink: 0; }
+  .navbar .nav-menu.open {
+    transform: scale(1) translateY(0);
+  }
+
+  .navbar .nav-menu .nav-list {
+    gap: 2px;
+  }
+
+  .navbar .nav-menu .nav-list>li {
+    flex-shrink: 0;
+  }
 
   .navbar .nav-menu .nav-link,
   .navbar.scrolled .nav-menu .nav-link {
@@ -3603,11 +3999,13 @@ body { font-weight: 400; line-height: 1.65; }
     border-bottom: 0;
     border-radius: var(--radius-md);
   }
+
   .navbar .nav-menu .nav-link.active,
   .navbar.scrolled .nav-menu .nav-link.active {
     color: var(--clr-yellow-400);
     background: rgba(255, 255, 255, 0.1);
   }
+
   .navbar .nav-menu .nav-link.nav-cta,
   .navbar.scrolled .nav-menu .nav-link.nav-cta {
     margin: var(--space-2) 0 0;
@@ -3619,13 +4017,18 @@ body { font-weight: 400; line-height: 1.65; }
     border-radius: var(--radius-md);
   }
 }
+
 @media (max-width: 1279px) and (hover: hover) and (pointer: fine) and (min-width: 768px) {
+
   .navbar .nav-menu .nav-link:hover,
   .navbar.scrolled .nav-menu .nav-link:hover {
     color: var(--clr-white);
     background: rgba(255, 255, 255, 0.14);
   }
-  .navbar .nav-menu .nav-link.nav-cta:hover { background: var(--clr-yellow-400); }
+
+  .navbar .nav-menu .nav-link.nav-cta:hover {
+    background: var(--clr-yellow-400);
+  }
 }
 
 /* Celular: 2º culto com gradiente vertical (azul em cima, roxo embaixo) */
@@ -3636,14 +4039,26 @@ body { font-weight: 400; line-height: 1.65; }
 }
 
 /* Localização: no celular/tablet (1 coluna) o botão do Maps fica embaixo do mapa */
-.maps-btn--mobile { display: none; }
+.maps-btn--mobile {
+  display: none;
+}
+
 @media (max-width: 899px) {
-  .maps-btn--desktop { display: none; }
-  .maps-btn--mobile { display: inline-flex; margin-top: calc(var(--space-4) - var(--space-10)); }
+  .maps-btn--desktop {
+    display: none;
+  }
+
+  .maps-btn--mobile {
+    display: inline-flex;
+    margin-top: calc(var(--space-4) - var(--space-10));
+  }
 }
 
 /* Botão flutuante do Instagram: só no celular, acima do WhatsApp */
-.instagram-float { display: none; }
+.instagram-float {
+  display: none;
+}
+
 @media (max-width: 767px) {
   .instagram-float {
     position: fixed;
@@ -3672,8 +4087,13 @@ body { font-weight: 400; line-height: 1.65; }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  [data-reveal].revealed { animation: none; }
-  .events-track { transition: none; }
+  [data-reveal].revealed {
+    animation: none;
+  }
+
+  .events-track {
+    transition: none;
+  }
 }
 
 /* =====================================================
@@ -3693,23 +4113,45 @@ body { font-weight: 400; line-height: 1.65; }
   overflow: visible;
 }
 
-/* Agenda no celular: sem setas, só swipe (pontos ficam como indicador) */
+/* Agenda no celular: sem setas, sem swipe; gira sozinha a cada 7s (pontos só indicam) */
 @media (max-width: 767px) {
-  .events-carousel .carousel-btn { display: none; }
-  .events-carousel { padding-bottom: 0; }
+  .events-carousel .carousel-btn {
+    display: none;
+  }
+
+  .events-carousel {
+    padding-bottom: 0;
+  }
+
   .events .carousel-dots {
     margin-top: var(--space-2);
     height: auto;
   }
-  .events-track-wrap { touch-action: pan-y; }
-  .events-track { user-select: none; -webkit-user-select: none; }
-  .events-track.dragging { transition: none; }
-  .events-track img { -webkit-user-drag: none; }
+
+  .events-track-wrap {
+    touch-action: pan-y;
+  }
+
+  .events-track {
+    user-select: none;
+    -webkit-user-select: none;
+  }
+
+  .events-track.dragging {
+    transition: none;
+  }
+
+  .events-track img {
+    -webkit-user-drag: none;
+  }
 }
 
 
 /* MyKids: "Com ele, você pode:" em linha própria, destaque azul */
-.mykids-info .section-desc { margin-bottom: var(--space-4); }
+.mykids-info .section-desc {
+  margin-bottom: var(--space-4);
+}
+
 .mykids-lead {
   display: inline-block;
   width: fit-content;
@@ -3730,6 +4172,7 @@ body { font-weight: 400; line-height: 1.65; }
   justify-content: center;
   gap: var(--space-3);
 }
+
 .btn-form-icon {
   width: 22px;
   height: 22px;
@@ -3744,8 +4187,77 @@ body { font-weight: 400; line-height: 1.65; }
   display: flex;
   justify-content: center;
 }
+
 .anniversary-logo {
   display: block;
   width: clamp(150px, 34vw, 200px);
   height: auto;
+}
+
+/* Agenda no celular: sem interação por toque (gira sozinha) */
+@media (max-width: 767px) {
+  .events-track-wrap {
+    touch-action: auto;
+  }
+
+  .events .carousel-dot {
+    pointer-events: none;
+  }
+}
+
+/* =====================================================
+   BATISMO: botão de inscrição
+   - celular: abaixo da imagem + versículo
+   - desktop: continua embaixo do texto (coluna esquerda)
+   ===================================================== */
+.baptism-content {
+  grid-area: content;
+}
+
+.baptism-visual {
+  grid-area: visual;
+}
+
+.baptism-cta {
+  grid-area: cta;
+  margin-top: 0;
+}
+
+.baptism-grid {
+  grid-template-areas:
+    "content"
+    "visual"
+    "cta";
+}
+
+@media (min-width: 900px) {
+  .baptism-grid {
+    grid-template-areas:
+      "content visual"
+      "cta     visual";
+    grid-template-rows: auto auto;
+    column-gap: var(--space-12);
+    row-gap: 0;
+    align-items: stretch;
+  }
+
+  .baptism-content {
+    align-self: end;
+  }
+
+  .baptism-visual {
+    align-self: center;
+  }
+
+  .baptism-cta {
+    align-self: start;
+    margin-top: var(--space-6);
+  }
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .baptism-cta .btn-primary:hover {
+    background: var(--clr-blue-500);
+    box-shadow: 0 8px 24px hsla(200, 90%, 50%, 0.3);
+  }
 }
